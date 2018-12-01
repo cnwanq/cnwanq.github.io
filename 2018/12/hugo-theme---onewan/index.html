@@ -1,15 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<meta name="generator" content="Hugo 0.49" />
     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>WanQ Notes</title>
+    <title>Hugo Theme - onewan | WanQ Notes</title>
     <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
 
     
@@ -64,117 +62,158 @@
             </div>
         </nav>
 
-<main id="list" role="main">
 
-<div id="main-hero" class="hero-body">
-    <div class="container has-text-centered">
-        <div class="columns is-vcentered">
-            <div class="column is-6 is-offset-3 has-text-centered is-header-caption">
-                <h1 class="title main-title subpage-title text-bold is-2">
-                    生活 · 编程 · 思想
-                </h1>
+<div id="main-hero" class="hero-body blog-hero">
+        <div class="container has-text-centered">
+            <h1 class="title flex-title main-title text-bold is-2">
+                
+                <span class="material-icons is-hidden-mobile" data-toggle="tooltip" data-placement="right" data-title="上一篇">keyboard_arrow_left</span>
+                <span class="subpage-title">Hugo Theme - onewan</span>
+                
+                <span class="material-icons is-hidden-mobile" data-toggle="tooltip" data-placement="left" data-title="下一篇">keyboard_arrow_right</span>
+            </h1>
+        </div>
+    </div>
+    
+</div>
+
+
+
+<section class="section blog-section section-light-grey">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-10 is-offset-1">
+                
+                <div class="flex-card is-full-post light-bordered">
+                    
+                    <div class="post-meta content">
+                        
+                        <div class="title-block">
+                            <h2>推荐一款自己开发的Hugo主题 - onewan</h2>
+                            <h4>2018年12月2日</h4>
+                            <div><span>作者</span> <a class="author-name"><b>wanq</b></a></div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="post-body content">
+                        
+
+<h1 id="hugo-theme-onewan">Hugo Theme - onewan</h1>
+
+<p>通过<code>Hugo</code>搭建这个站点后，就想着捣鼓一些不一样的东西，那么首先就从网站的样式上入手，就自己开发了这个主题<code>onewan</code>。
+主题地址 <a href="https://github.com/cnwanq/onewan">onewan theme</a></p>
+
+<h2 id="主题的结构">主题的结构</h2>
+
+<pre><code>├── LICENSE
+├── archetypes
+│   └── default.md
+├── data
+├── i18n
+├── layouts
+│   ├── 404.html
+│   ├── _default
+│   │   ├── baseof.html
+│   │   ├── list.html
+│   │   └── single.html
+│   ├── index.html
+│   └── partials
+│       ├── footer.html
+│       └── header.html
+├── static
+│   ├── assets
+│   │   ├── css
+│   │   ├── fonts
+│   │   ├── images
+│   │   └── js
+│   └── images
+└── theme.toml
+</code></pre>
+
+<p>站点的配置文件如下</p>
+
+<pre><code>baseURL = &quot;http://wanq.me/&quot;
+languageCode = &quot;en&quot;
+title = &quot;WanQ Notes&quot;
+theme = &quot;onewan&quot;
+
+[Params]
+subtitle = &quot;生活 · 编程 · 思想&quot;
+github = &quot;https://github.com/cnwanq&quot;
+profile = &quot;/images/swift.png&quot;
+copyright = &quot;Copyright © 2018 WanQ All rights reserved.&quot;
+banner = &quot;/images/2012021709492293.jpg&quot;
+
+[permalinks]
+  post = &quot;/:year/:month/:title/&quot;
+
+# 支持动态扩展菜单
+# [Menu]
+#   [[Menu.main]]
+#     name = &quot;文章&quot;
+#     url = &quot;/post/&quot;
+#     weight = 1
+#   [[Menu.main]]
+#     name = &quot;关于我&quot;
+#     url = &quot;/about/&quot;
+#     weight = 2
+</code></pre>
+
+<p><strong>目前支持：</strong></p>
+
+<ul>
+<li>网站首页</li>
+<li>文档明细页</li>
+<li>动态扩展菜单</li>
+</ul>
+
+<p><strong>接下来计划：</strong></p>
+
+<ul>
+<li>近期文章</li>
+<li>归档功能</li>
+<li>分类列表</li>
+<li>标签列表</li>
+<li>评论</li>
+<li>搜索</li>
+</ul>
+
+
+                        
+                        <div class="share-post">
+                            <div class="share-text">
+                                Share:
+                            </div>
+                            
+                            <div class="sharing-options">
+                                <i class="fa fa-envelope"></i>
+                                <i class="fa fa-facebook"></i>
+                                <i class="fa fa-twitter"></i>
+                                <i class="fa fa-linkedin"></i>
+                                <i class="fa fa-google-plus"></i>
+                                <i class="fa fa-reddit"></i>
+                                <i class="fa fa-tumblr"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>
-</div>
-
-</div>
-
-
-
-<section class="section is-medium blog-section section-light-grey">
-<div class="container">
-    <div class="columns">
-        <div class="column is-8 is-offset-2">
-            
-            
-
-            
-            <div class="flex-card is-post light-bordered">
-                
-                <div class="header has-background-image" data-background="./post/onewan-wanq.me" style="background-color: rgb(0, 0, 0); opacity: 0.85;">
-                    <div class="title-wrapper">
-                        <h2 class="post-title">Hugo Theme - onewan</h2>
-                        
-                        <h4 class="post-subtitle">推荐一款自己开发的Hugo主题 - onewan</h4>
-                        
-                    </div>
-                    <div class="author-avatar"><img src="./images/swift.jpg" alt=""></div>
-                </div>
-                
-                <div class="post-body">
-                    <small>2018年12月2日</small>
-                    <div><span>作者</span> <a class="author-name"><b>wanq</b></a></div>
-                    <p>Hugo Theme - onewan 通过Hugo搭建这个站点后，就想着捣鼓一些不一样的东西，那么首先就从网站的样式上入手，就自己开发了这个主题onewan。 主题地址 onewan theme
-主题的结构 ├── LICENSE ├── archetypes │ └── default.md ├── data ├── i18n ├── layouts │ ├── 404.html │ ├── _default │ │ ├── baseof.html │ │ ├── list.html │ │ └── single.html │ ├── index.html │ └── partials │ ├── footer.html │ └── header.html ├── static │ ├── assets │ │ ├── css │ │ ├── fonts │ │ ├── images │ │ └── js │ └── images └── theme.</p>
-                    
-                    <div class="content-footer">
-                        <div class="footer-details">
-                            <a class="button is-link btn-upper" href="http://cnwanq.github.io/2018/12/hugo-theme---onewan/">阅读更多</a>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-            
-            
-
-            
-            <div class="flex-card is-post light-bordered">
-                
-                <div class="header has-background-image" data-background="./post/hugo-banner.png" style="background-color: rgb(0, 0, 0); opacity: 0.85;">
-                    <div class="title-wrapper">
-                        <h2 class="post-title">Hello Hugo</h2>
-                        
-                        <h4 class="post-subtitle">Hugo 是一个非常好的文档建站工具</h4>
-                        
-                    </div>
-                    <div class="author-avatar"><img src="./images/swift.jpg" alt=""></div>
-                </div>
-                
-                <div class="post-body">
-                    <small>2018年11月30日</small>
-                    <div><span>作者</span> <a class="author-name"><b>wanq</b></a></div>
-                    <p><blockquote>
-<p>本博客是有<code>Hugo</code>搭建的，那么首先就来介绍下如何使用<code>Hugo</code>快捷的搭建博客网站</p>
-</blockquote>
-
-<h1 id="hello-hugo">Hello Hugo</h1>
-
-<p><code>Hugo</code>是什么呢？
-<code>Hugo</code>是由<code>Go</code>语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。<br />
-这是它的网址 <a href="https://gohugo.io/">Hugo Link</a>
-</p></p>
-                    
-                    <div class="content-footer">
-                        <div class="footer-details">
-                            <a class="button is-link btn-upper" href="http://cnwanq.github.io/2018/11/hello-hugo/">阅读更多</a>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-            
-            
-        </div>
-        
-        
-                
-                
-                
-                
-
-                
-                
-                
-                
-            
-            
-    </div>
-</div>
 </section>
 
-</main>
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -225,4 +264,3 @@
 <script src="/assets/js/main.js"></script>
 </body>
 </html>
-
