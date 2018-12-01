@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Hello Hugo | WanQ Notes</title>
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+
+    
+    <link rel="stylesheet" href="/assets/css/bulma.css">
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="stylesheet" href="/assets/css/core_flashy.css">
+
+</head>
+
+<body>
+    <div class="pageloader"></div>
+    <div class="infraloader is-active"></div>
+
+    
+    <div class="hero parallax is-cover is-relative is-default is-bold" data-background="/images/2012021709492293.jpg"
+        data-color="#000" data-color-opacity="0.3">
+        <nav class="navbar navbar-wrapper navbar-fade navbar-light is-transparent">
+            <div class="container">
+                
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="/">
+                        <img class="light-logo" src="/assets/images/logos/bulkit-white.svg" alt="">
+                        <img class="dark-logo" src="/assets/images/logos/bulkit-green.svg" alt="">
+                    </a>
+                    
+                    <div class="custom-burger" data-target="">
+                        <a id="" class="responsive-btn" href="javascript:void(0);">
+                            <span class="menu-toggle">
+                                <span class="icon-box-toggle">
+                                    <span class="rotate">
+                                        <i class="icon-line-top"></i>
+                                        <i class="icon-line-center"></i>
+                                        <i class="icon-line-bottom"></i>
+                                    </span>
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                    
+                </div>
+                
+                <div class="navbar-menu">
+                    
+                    <div class="navbar-start">
+                        
+                        <a class="navbar-item is-slide" href="/">
+                            首页
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+<div id="main-hero" class="hero-body blog-hero">
+        <div class="container has-text-centered">
+            <h1 class="title flex-title main-title text-bold is-2">
+                
+                <span class="material-icons is-hidden-mobile" data-toggle="tooltip" data-placement="right" data-title="Previous post">keyboard_arrow_left</span>
+                <span class="subpage-title">Hello Hugo</span>
+                
+                <span class="material-icons is-hidden-mobile" data-toggle="tooltip" data-placement="left" data-title="Next post">keyboard_arrow_right</span>
+            </h1>
+        </div>
+    </div>
+    
+</div>
+
+
+
+<section class="section blog-section section-light-grey">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-10 is-offset-1">
+                
+                <div class="flex-card is-full-post light-bordered">
+                    
+                    <div class="post-meta content">
+                        
+                        <div class="title-block">
+                            <h2>Hugo 是一个非常好的文档建站工具</h2>
+                            <h4>2018年11月30日</h4>
+                            <div><span>作者</span> <a class="author-name"><b>wanq</b></a></div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="post-body content">
+                        <blockquote>
+<p>本博客是有<code>Hugo</code>搭建的，那么首先就来介绍下如何使用<code>Hugo</code>快捷的搭建博客网站</p>
+</blockquote>
+
+<h1 id="hello-hugo">Hello Hugo</h1>
+
+<p><code>Hugo</code>是什么呢？
+<code>Hugo</code>是由<code>Go</code>语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。<br />
+这是它的网址 <a href="https://gohugo.io/">Hugo Link</a>
+</p>
+
+<h2 id="安装hugo">安装Hugo</h2>
+
+<p><code>macOS</code>系统通过<code>Homebrew</code>安装</p>
+
+<pre><code class="language-bash">brew install hugo
+</code></pre>
+
+<p><code>Windows</code>系统可以通过<code>Chocolatey</code>或者<code>Scoop</code>包管理工具安装</p>
+
+<pre><code class="language-bash"># by Chocolatey
+choco install hugu -confirm
+
+# by Scoop
+scoop install hugo
+</code></pre>
+
+<h2 id="创建站点">创建站点</h2>
+
+<p>通过<code>hugo</code>生成站点，比如希望生成到<code>/path/to/site</code>路径</p>
+
+<pre><code class="language-bash">hugo new site /path/to/site
+</code></pre>
+
+<p>这个样就在<code>/path/to/site</code>目录生成了初始站点。</p>
+
+<h2 id="创建文章">创建文章</h2>
+
+<p>创建一个<code>about</code>页面</p>
+
+<pre><code class="language-bash">hugo new about.md
+</code></pre>
+
+<p>创建一篇文章，放在<code>post</code>目录，方便之后生成聚合页面</p>
+
+<pre><code class="language-bash">hugo new post/hello.md
+</code></pre>
+
+<h2 id="安装主题">安装主题</h2>
+
+<p>可以在[Hugo Themes]选择一个合适的主题进行安装，这里我们安装<code>hyde</code>主题</p>
+
+<pre><code class="language-bash">cd themes
+git clone https://github.com/spf13/hyde.git
+</code></pre>
+
+<h2 id="运行hugo">运行Hugo</h2>
+
+<p>在你的站点根目录执行<code>Hugo</code>命令进行调试</p>
+
+<pre><code class="language-bash">hugo server -t hyde -D
+</code></pre>
+
+<p>浏览器里打开：<code>http://localhost:1313</code></p>
+
+<h2 id="发布部署">发布部署</h2>
+
+<p>通过<code>Hugo</code>命令生成静态的页面代码</p>
+
+<pre><code class="language-bash">hugo -t hyde
+</code></pre>
+
+                        
+                        <div class="share-post">
+                            <div class="share-text">
+                                Share:
+                            </div>
+                            
+                            <div class="sharing-options">
+                                <i class="fa fa-envelope"></i>
+                                <i class="fa fa-facebook"></i>
+                                <i class="fa fa-twitter"></i>
+                                <i class="fa fa-linkedin"></i>
+                                <i class="fa fa-google-plus"></i>
+                                <i class="fa fa-reddit"></i>
+                                <i class="fa fa-tumblr"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer id="dark-footer" class="footer footer-blog">
+<div class="container">
+    <div class="columns">
+        <div class="column">
+            <div class="footer-column">
+
+                <div class="footer-header">
+                    <nav class="level is-mobile">
+                        <div class="level-left level-social">
+                            <a href="#" class="level-item">
+                                <span class="icon"><i class="fa fa-facebook"></i></span>
+                            </a>
+                            <a href="#" class="level-item">
+                                <span class="icon"><i class="fa fa-twitter"></i></span>
+                            </a>
+                            <a href="#" class="level-item">
+                                <span class="icon"><i class="fa fa-linkedin"></i></span>
+                            </a>
+                            <a href="#" class="level-item">
+                                <span class="icon"><i class="fa fa-dribbble"></i></span>
+                            </a>
+                            <a href="#" class="level-item">
+                                <span class="icon"><i class="fa fa-github"></i></span>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="copyright">
+                    <span class="moto light-text">Copyright © 2018 WanQ All rights reserved. reserved.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</footer>
+        
+<div id="backtotop"><a href="#"></a></div>        
+<script src="/assets/js/app.js"></script>
+
+
+<script src="/assets/js/agency.js"></script>
+<script src="/assets/js/contact.js"></script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
