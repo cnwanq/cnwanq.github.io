@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Theme on WanQ Notes</title>
+    <link>http://cnwanq.github.io/tags/theme/</link>
+    <description>Recent content in Theme on WanQ Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 02 Dec 2018 00:41:37 +0800</lastBuildDate>
+    
+	<atom:link href="http://cnwanq.github.io/tags/theme/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo Theme - onewan</title>
+      <link>http://cnwanq.github.io/2018/12/hugo-theme---onewan/</link>
+      <pubDate>Sun, 02 Dec 2018 00:41:37 +0800</pubDate>
+      
+      <guid>http://cnwanq.github.io/2018/12/hugo-theme---onewan/</guid>
+      <description>Hugo Theme - onewan 通过Hugo搭建这个站点后，就想着捣鼓一些不一样的东西，那么首先就从网站的样式上入手，就自己开发了这个主题onewan。 主题地址 onewan theme
+主题的结构 ├── LICENSE ├── archetypes │ └── default.md ├── data ├── i18n ├── layouts │ ├── 404.html │ ├── _default │ │ ├── baseof.html │ │ ├── list.html │ │ └── single.html │ ├── index.html │ └── partials │ ├── footer.html │ └── header.html ├── static │ ├── assets │ │ ├── css │ │ ├── fonts │ │ ├── images │ │ └── js │ └── images └── theme.</description>
+    </item>
+    
+  </channel>
+</rss>
