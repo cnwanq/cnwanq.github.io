@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>Hugo Theme - onewan | WanQ Notes</title>
+    <title>客户端如何同步服务端时间 | WanQ Notes</title>
     <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
 
     
@@ -67,11 +67,11 @@
         <div class="container has-text-centered">
             <h1 class="title flex-title main-title text-bold is-2">
                 
-                <a style="color:white" href="/2018/12/%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%A6%82%E4%BD%95%E5%90%8C%E6%AD%A5%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%97%B6%E9%97%B4/"><span class="material-icons is-hidden-mobile" data-toggle="tooltip" data-placement="right" data-title="客户端如何同步服务端时间">keyboard_arrow_left</span></a>
+                <span class="material-icons is-hidden-mobile is-disabled" data-toggle="tooltip" data-placement="right" data-title="上一篇">keyboard_arrow_left</span>
                 
-                <span class="subpage-title">Hugo Theme - onewan</span>
+                <span class="subpage-title">客户端如何同步服务端时间</span>
                 
-                <a style="color:white" href="/2018/11/hello-hugo/"><span class="material-icons is-hidden-mobile" data-toggle="tooltip" data-placement="left" data-title="Hello Hugo">keyboard_arrow_right</span></a>
+                <a style="color:white" href="/2018/12/hugo-theme---onewan/"><span class="material-icons is-hidden-mobile" data-toggle="tooltip" data-placement="left" data-title="Hugo Theme - onewan">keyboard_arrow_right</span></a>
                 
             </h1>
         </div>
@@ -91,94 +91,134 @@
                     <div class="post-meta content">
                         
                         <div class="title-block">
-                            <h2>推荐一款自己开发的Hugo主题 - onewan</h2>
-                            <h4>2018年12月2日</h4>
+                            <h2>为大家分享真实的项目遇到的问题</h2>
+                            <h4>2018年12月3日</h4>
                             <div><span>作者</span> <a class="author-name"><b>wanq</b></a></div>
                         </div>
                     </div>
 
                     
                     <div class="post-body content">
-                        <h1 id="hugo-theme-onewan">Hugo Theme - onewan</h1>
+                        <p>开发过程中，有些业务场景对时间的要求会比较严谨，需要限定时间的精确度、或者时间的范围，不符合就不能正常的执行下去。比如：倒计时，待支付，抢购活动。<br />
+这样就需要一个方案来解决服务端与客户端时间的同步，确保业务的正常进行。</p>
 
-<p>通过<code>Hugo</code>搭建这个站点后，就想着捣鼓一些不一样的东西，那么首先就从网站的样式上入手，就自己开发了这个主题<code>onewan</code>。
-主题地址 <a href="https://github.com/cnwanq/onewan">onewan theme</a>
+<p>突然想起年少时玩的网游<strong>石器时代</strong>，有种作弊的方式是通过电脑启动一款软件<strong>变速齿轮</strong>，修改电脑中程序运行的倍数，来改变正常的游戏节奏。
 </p>
 
-<h2 id="主题的结构">主题的结构</h2>
+<blockquote>
+<p>变速齿轮: 首先，变速齿轮改变的是应用程序（一般是游戏）的速度，而不是操作系统的。一些游戏中的时间不使用系统提供的实际时间，而是采用与程序所占用的 CPU 时间相关的某个逻辑时间，比如事件循环每 n 次算一个单位时间，或者画面重画一次算一个单位时间。这一计算时间的方式多见于早期的电子游戏，不使用系统提供的时间的理由多为 API 支持不完善，不能获取足够精确的时间，而在多媒体应用中，获取高精度时间有时是很必要的。</p>
+</blockquote>
 
-<pre><code>├── LICENSE
-├── archetypes
-│   └── default.md
-├── data
-├── i18n
-├── layouts
-│   ├── 404.html
-│   ├── _default
-│   │   ├── baseof.html
-│   │   ├── list.html
-│   │   └── single.html
-│   ├── index.html
-│   └── partials
-│       ├── footer.html
-│       └── header.html
-├── static
-│   ├── assets
-│   │   ├── css
-│   │   ├── fonts
-│   │   ├── images
-│   │   └── js
-│   └── images
-└── theme.toml
+<p>假如游戏中加入了时间校验，那么可以通过服务端检验客户端的时间，预防通过改变客户端时间产生的问题。</p>
+
+<h2 id="那么如何确定这个方案呢">那么如何确定这个方案呢？</h2>
+
+<p>假设一个需求：有个抢购的活动，中午12点开抢。</p>
+
+<p>一个活动界面有个抢购的按钮，12点后可以点击抢购，12点前灰置不可以点击。<br />
+那么开发人员可能会这样编写该逻辑</p>
+
+<h2 id="方案一">方案一</h2>
+
+<pre><code>let button = new button();
+button.disable = yes;
+
+let time = new date(); // 获取系统当前的时间
+if (time &gt;= 12:00) {
+    button.disable = no;
+}
 </code></pre>
 
-<p>站点的配置文件如下</p>
+<p>通常来说，这代码不会有问题，但是如果用户修改了系统的时间，将系统时间提前了一小时，界面上就可以提前点击抢购按钮。</p>
 
-<pre><code>baseURL = &quot;http://wanq.me/&quot;
-languageCode = &quot;en&quot;
-title = &quot;WanQ Notes&quot;
-theme = &quot;onewan&quot;
+<p>问题发现了，是可以调整系统时间影响功能。</p>
 
-[Params]
-subtitle = &quot;生活 · 编程 · 思想&quot;
-github = &quot;https://github.com/cnwanq&quot;
-profile = &quot;/images/swift.png&quot;
-copyright = &quot;Copyright © 2018 WanQ All rights reserved.&quot;
-banner = &quot;/images/2012021709492293.jpg&quot;
+<h2 id="方案二">方案二</h2>
 
-[permalinks]
-  post = &quot;/:year/:month/:title/&quot;
+<p>如果不用客户端本地时间，那么需要引入服务端的时间，服务端提供接口返回服务端当前的时间。</p>
 
-# 支持动态扩展菜单
-# [Menu]
-#   [[Menu.main]]
-#     name = &quot;文章&quot;
-#     url = &quot;/post/&quot;
-#     weight = 1
-#   [[Menu.main]]
-#     name = &quot;关于我&quot;
-#     url = &quot;/about/&quot;
-#     weight = 2
+<p>这样代码就可能变成</p>
+
+<pre><code>let button = new button();
+button.disable = yes;
+
+let time = getServerTime(); // 获取系统当前的时间
+if (time &gt;= 12:00) {
+    button.disable = no;
+}
+
+function getServerTime() {
+    // by http reqest server
+    return serverTime;
+}
+
 </code></pre>
 
-<p><strong>目前支持：</strong></p>
+<p>如果客户端每次需要判断时间，都调用该接口的话，由于网络请求的延迟，这个时间也不是很准确的，另外会对服务端造成一定的压力。严重的话就产生DDOS攻击。</p>
 
-<ul>
-<li>网站首页</li>
-<li>文档明细页</li>
-<li>动态扩展菜单</li>
-</ul>
+<p>防止一个终端频繁请求服务器获取服务端的时间，那么可不可能只需要获取一次服务器的时间。剩下的就让客户端处理呢。</p>
 
-<p><strong>接下来计划：</strong></p>
+<h2 id="方案三">方案三</h2>
 
-<ul>
-<li>近期文章</li>
-<li>归档功能</li>
-<li>分类列表</li>
-<li>标签列表</li>
-<li>评论</li>
-<li>搜索</li>
-</ul>
+<p>其实合理的做法就是客户端只需要同步一次服务端的服务器时间，然后将获取到的服务器与终端的一个绝对时间作为参考。要获取最新的服务段时间，可以不用请求服务器，通过参考的绝对时间与现在的这个时间做个减法，将结果添加到之前保存的服务端的时间，就得到最新的服务器时间。</p>
+
+<p><strong>步骤</strong>
+* 启动同步服务器时间，并保存至内存
+* 取当前系统绝对时间，作为参考绑定同步的服务器时间，保存该系统绝对时间
+* 获取新的服务器时间，取新的当前系统时间，比对之前系统时间，得到偏移量
+* 将保存的服务器时间加上偏移量，得到新的服务器时间</p>
+
+<p>伪代码来一段</p>
+
+<pre><code>let button = new button();
+button.disable = yes;
+
+let serverTime;
+let systemTime;
+
+syncServerTime();
+
+time = getCurrentTime();
+if (time &gt;= 12:00) {
+    button.disable = no;
+}
+
+
+function syncServerTime() {
+    serverTime = getServerTime(); // 获取系统服务器时间
+    systemTime = getSystemTime(); // 获取客户端系统，不可修改，休眠
+}
+
+function getCurrentTime() {
+    currentSystemTime = getSystemTime();
+    let diff = currentSystemTime - systemTime;
+    return serverTime + diff;
+}
+
+
+function getServerTime() {
+    // by http reqest server
+    return serverTime;
+}
+
+function getSystemTime() {
+    // get machine time, don't get system time;
+}
+
+</code></pre>
+
+<h2 id="总结">总结</h2>
+
+<p><strong>需要注意</strong>
+获取系统时间的方法，一定要是不能系统的时间，系统时间可以修改；iOS上不要获取进程的运行时间，进程会睡眠，导致该时间会变小，影响最终结果。</p>
+
+<p>为什么写这个，是因为这个隐晦的问题（系统睡眠，进程运行时间停止），之前一直没有发现。导致造成了一些问题。</p>
+
+<p>以上分享该经验，希望可以帮组需要的小伙伴。</p>
+
+<h3 id="推荐一篇文章">推荐一篇文章</h3>
+
+<p><a href="https://everettjf.github.io/2018/08/07/get-current-time-on-ios-platform/">iOS获取时间的方法</a></p>
 
                         
                         <div class="share-post">
@@ -209,9 +249,16 @@ banner = &quot;/images/2012021709492293.jpg&quot;
                                 <div class="post-title">
                                     <nav id="TableOfContents">
 <ul>
-<li><a href="#hugo-theme-onewan">Hugo Theme - onewan</a>
+<li>
 <ul>
-<li><a href="#主题的结构">主题的结构</a></li>
+<li><a href="#那么如何确定这个方案呢">那么如何确定这个方案呢？</a></li>
+<li><a href="#方案一">方案一</a></li>
+<li><a href="#方案二">方案二</a></li>
+<li><a href="#方案三">方案三</a></li>
+<li><a href="#总结">总结</a>
+<ul>
+<li><a href="#推荐一篇文章">推荐一篇文章</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>

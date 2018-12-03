@@ -17,8 +17,11 @@
       <pubDate>Sun, 02 Dec 2018 00:41:37 +0800</pubDate>
       
       <guid>http://cnwanq.github.io/2018/12/hugo-theme---onewan/</guid>
-      <description>Hugo Theme - onewan 通过Hugo搭建这个站点后，就想着捣鼓一些不一样的东西，那么首先就从网站的样式上入手，就自己开发了这个主题onewan。 主题地址 onewan theme
-主题的结构 ├── LICENSE ├── archetypes │ └── default.md ├── data ├── i18n ├── layouts │ ├── 404.html │ ├── _default │ │ ├── baseof.html │ │ ├── list.html │ │ └── single.html │ ├── index.html │ └── partials │ ├── footer.html │ └── header.html ├── static │ ├── assets │ │ ├── css │ │ ├── fonts │ │ ├── images │ │ └── js │ └── images └── theme.</description>
+      <description>&lt;h1 id=&#34;hugo-theme-onewan&#34;&gt;Hugo Theme - onewan&lt;/h1&gt;
+
+&lt;p&gt;通过&lt;code&gt;Hugo&lt;/code&gt;搭建这个站点后，就想着捣鼓一些不一样的东西，那么首先就从网站的样式上入手，就自己开发了这个主题&lt;code&gt;onewan&lt;/code&gt;。
+主题地址 &lt;a href=&#34;https://github.com/cnwanq/onewan&#34;&gt;onewan theme&lt;/a&gt;
+&lt;/p&gt;</description>
     </item>
     
   </channel>

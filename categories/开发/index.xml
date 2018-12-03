@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>开发 on WanQ Notes</title>
+    <link>http://cnwanq.github.io/categories/%E5%BC%80%E5%8F%91/</link>
+    <description>Recent content in 开发 on WanQ Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 03 Dec 2018 17:59:06 +0800</lastBuildDate>
+    
+	<atom:link href="http://cnwanq.github.io/categories/%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>客户端如何同步服务端时间</title>
+      <link>http://cnwanq.github.io/2018/12/%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%A6%82%E4%BD%95%E5%90%8C%E6%AD%A5%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%97%B6%E9%97%B4/</link>
+      <pubDate>Mon, 03 Dec 2018 17:59:06 +0800</pubDate>
+      
+      <guid>http://cnwanq.github.io/2018/12/%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%A6%82%E4%BD%95%E5%90%8C%E6%AD%A5%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%97%B6%E9%97%B4/</guid>
+      <description>&lt;p&gt;开发过程中，有些业务场景对时间的要求会比较严谨，需要限定时间的精确度、或者时间的范围，不符合就不能正常的执行下去。比如：倒计时，待支付，抢购活动。&lt;br /&gt;
+这样就需要一个方案来解决服务端与客户端时间的同步，确保业务的正常进行。&lt;/p&gt;
+
+&lt;p&gt;突然想起年少时玩的网游&lt;strong&gt;石器时代&lt;/strong&gt;，有种作弊的方式是通过电脑启动一款软件&lt;strong&gt;变速齿轮&lt;/strong&gt;，修改电脑中程序运行的倍数，来改变正常的游戏节奏。
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
