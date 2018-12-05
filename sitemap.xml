@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://cnwanq.github.io/2018/12/objective-c%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/</loc>
+    <lastmod>2018-12-04T15:25:39+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://cnwanq.github.io/2018/12/%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%A6%82%E4%BD%95%E5%90%8C%E6%AD%A5%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%97%B6%E9%97%B4/</loc>
     <lastmod>2018-12-03T17:59:06+08:00</lastmod>
   </url>
@@ -23,8 +28,8 @@
   </url>
   
   <url>
-    <loc>http://cnwanq.github.io/tags/hugo/</loc>
-    <lastmod>2018-11-30T11:59:00+08:00</lastmod>
+    <loc>http://cnwanq.github.io/tags/google/</loc>
+    <lastmod>2018-12-04T15:25:39+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -35,14 +40,32 @@
   </url>
   
   <url>
+    <loc>http://cnwanq.github.io/tags/hugo/</loc>
+    <lastmod>2018-11-30T11:59:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://cnwanq.github.io/tags/ios/</loc>
+    <lastmod>2018-12-04T15:25:39+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://cnwanq.github.io/tags/oc/</loc>
+    <lastmod>2018-12-04T15:25:39+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://cnwanq.github.io/post/</loc>
-    <lastmod>2018-12-03T17:59:06+08:00</lastmod>
+    <lastmod>2018-12-04T15:25:39+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://cnwanq.github.io/tags/</loc>
-    <lastmod>2018-11-30T11:59:00+08:00</lastmod>
+    <lastmod>2018-12-04T15:25:39+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -54,7 +77,13 @@
   
   <url>
     <loc>http://cnwanq.github.io/</loc>
-    <lastmod>2018-12-03T17:59:06+08:00</lastmod>
+    <lastmod>2018-12-04T15:25:39+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://cnwanq.github.io/categories/%E5%BC%80%E5%8F%91/</loc>
+    <lastmod>2018-12-04T15:25:39+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -65,8 +94,8 @@
   </url>
   
   <url>
-    <loc>http://cnwanq.github.io/categories/%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2018-12-03T17:59:06+08:00</lastmod>
+    <loc>http://cnwanq.github.io/categories/%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/</loc>
+    <lastmod>2018-12-04T15:25:39+08:00</lastmod>
     <priority>0</priority>
   </url>
   
