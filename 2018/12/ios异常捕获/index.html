@@ -99,9 +99,7 @@
 
                     
                     <div class="post-body content">
-                        
-
-<blockquote>
+                        <blockquote>
 <p>项目上需要将发生 Crash 发送到 Slack 频道中，那么需要捕获异常，并发送消息至 Slack。</p>
 </blockquote>
 
@@ -110,7 +108,8 @@ Crash 分为两种, 一种是由<code>EXC_BAD_ACCESS</code>引起的，原因是
 
 <h1 id="系统crash">系统Crash</h1>
 
-<p>对于系统<code>Crash</code>而引起的程序异常退出，可以通过<code>UncaughtExceptionHandler</code>机制捕获；也就是说在程序中<code>catch</code>以外的内容，被系统自带的错误处理而捕获。我们要做的就是用自定义的函数替代该<code>ExceptionHandler</code>即可。</p>
+<p>对于系统<code>Crash</code>而引起的程序异常退出，可以通过<code>UncaughtExceptionHandler</code>机制捕获；也就是说在程序中<code>catch</code>以外的内容，被系统自带的错误处理而捕获。我们要做的就是用自定义的函数替代该<code>ExceptionHandler</code>即可。
+</p>
 
 <h1 id="处理signal">处理Signal</h1>
 
@@ -229,7 +228,6 @@ SIGALRM,SIGHUP,SIGINT,SIGKILL,SIGPIPE,SIGPOLL,SIGPROF,SIGSYS,SIGTERM,SIGUSR1,SIG
 <h2 id="代码地址">代码地址：</h2>
 
 <p><a href="https://github.com/cnwanq/FITCrashKit">FITCrashKit</a></p>
-
 
                         
                         <div class="share-post">
