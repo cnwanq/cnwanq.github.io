@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ios on WanQ Notes</title>
-    <link>http://cnwanq.github.io/categories/ios/</link>
-    <description>Recent content in Ios on WanQ Notes</description>
+    <title>异常 on WanQ Notes</title>
+    <link>http://cnwanq.github.io/tags/%E5%BC%82%E5%B8%B8/</link>
+    <description>Recent content in 异常 on WanQ Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 10 Dec 2018 21:43:44 +0800</lastBuildDate>
     
-	<atom:link href="http://cnwanq.github.io/categories/ios/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://cnwanq.github.io/tags/%E5%BC%82%E5%B8%B8/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -30,21 +30,6 @@
  SIGBUS 非法地址, 包括内存地址对齐(alignment)出错。比如访问一个四个字长的整数, 但其地址不是4的倍数。它与SIGSEGV的区别在于后者是由于对合法存储地址的非法访问触发的(如访问不属于自己存储空间或只读存储空间)。
  SIGFPE 在发生致命的算术运算错误时发出. 不仅包括浮点运算错误, 还包括溢出及除数为0等其它所有的算术的错误。
  SIGKILL 用来立即结束程序的运行.</description>
-    </item>
-    
-    <item>
-      <title>iOS如何实现分渠道打包</title>
-      <link>http://cnwanq.github.io/2018/12/ios%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%88%86%E6%B8%A0%E9%81%93%E6%89%93%E5%8C%85/</link>
-      <pubDate>Fri, 07 Dec 2018 12:08:22 +0800</pubDate>
-      
-      <guid>http://cnwanq.github.io/2018/12/ios%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%88%86%E6%B8%A0%E9%81%93%E6%89%93%E5%8C%85/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;背景：&lt;br /&gt;
-APP里面之前添加了 Fabric Crashlytics 统计，现在想区分产线和开发环境的数据统计的数据。
-这个需求非常像分渠道打包。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&#34;如何部署-fabric&#34;&gt;如何部署 Fabric&lt;/h2&gt;</description>
     </item>
     
   </channel>

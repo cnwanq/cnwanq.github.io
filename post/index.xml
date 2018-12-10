@@ -6,10 +6,31 @@
     <description>Recent content in Posts on WanQ Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 07 Dec 2018 12:08:22 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 10 Dec 2018 21:43:44 +0800</lastBuildDate>
     
 	<atom:link href="http://cnwanq.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>iOS异常捕获</title>
+      <link>http://cnwanq.github.io/2018/12/ios%E5%BC%82%E5%B8%B8%E6%8D%95%E8%8E%B7/</link>
+      <pubDate>Mon, 10 Dec 2018 21:43:44 +0800</pubDate>
+      
+      <guid>http://cnwanq.github.io/2018/12/ios%E5%BC%82%E5%B8%B8%E6%8D%95%E8%8E%B7/</guid>
+      <description>项目上需要将发生 Crash 发送到 Slack 频道中，那么需要捕获异常，并发送消息至 Slack。
+ 开发 iOS 应用，解决 Crash 问题始终是一个难题。 Crash 分为两种, 一种是由EXC_BAD_ACCESS引起的，原因是访问了不属于本进程的内存地址，有可能是访问了已经被释放的内存；另一种是未被捕获的Objective-C异常。
+系统Crash 对于系统Crash而引起的程序异常退出，可以通过UncaughtExceptionHandler机制捕获；也就是说在程序中catch以外的内容，被系统自带的错误处理而捕获。我们要做的就是用自定义的函数替代该ExceptionHandler即可。
+处理Signal 使用Objective-C的异常处理是不能得到signal的，如果要处理它，我们还要利用unix标准的signal机制，注册SIGABRT, SIGBUS, SIGSEGV等信号发生时的处理函数。该函数中我们可以输出栈信息，版本信息等其他一切我们所想要的。
+信号说明  SIGHUP 本信号在用户终端连接(正常或非正常)结束时发出, 通常是在终端的控制进程结束时, 通知同一session内的各个作业, 这时它们与控制终端不再关联。 登录Linux时，系统会分配给登录用户一个终端(Session)。在这个终端运行的所有程序，包括前台进程组和后台进程组，一般都属于这个 Session。当用户退出Linux登录时，前台进程组和后台有对终端输出的进程将会收到SIGHUP信号。这个信号的默认操作为终止进程，因此前台进 程组和后台有终端输出的进程就会中止。不过可以捕获这个信号，比如wget能捕获SIGHUP信号，并忽略它，这样就算退出了Linux登录， wget也 能继续下载。 此外，对于与终端脱离关系的守护进程，这个信号用于通知它重新读取配置文件。
+ SIGINT 程序终止(interrupt)信号, 在用户键入INTR字符(通常是Ctrl-C)时发出，用于通知前台进程组终止进程。
+ SIGQUIT 和SIGINT类似, 但由QUIT字符(通常是Ctrl-)来控制. 进程在因收到SIGQUIT退出时会产生core文件, 在这个意义上类似于一个程序错误信号。
+ SIGILL 执行了非法指令. 通常是因为可执行文件本身出现错误, 或者试图执行数据段. 堆栈溢出时也有可能产生这个信号。
+ SIGTRAP 由断点指令或其它trap指令产生. 由debugger使用。
+ SIGABRT 调用abort函数生成的信号。
+ SIGBUS 非法地址, 包括内存地址对齐(alignment)出错。比如访问一个四个字长的整数, 但其地址不是4的倍数。它与SIGSEGV的区别在于后者是由于对合法存储地址的非法访问触发的(如访问不属于自己存储空间或只读存储空间)。
+ SIGFPE 在发生致命的算术运算错误时发出. 不仅包括浮点运算错误, 还包括溢出及除数为0等其它所有的算术的错误。
+ SIGKILL 用来立即结束程序的运行.</description>
+    </item>
     
     <item>
       <title>iOS如何实现分渠道打包</title>
