@@ -6,10 +6,25 @@
     <description>Recent content on WanQ Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 04 Dec 2018 15:25:39 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 07 Dec 2018 12:08:22 +0800</lastBuildDate>
     
 	<atom:link href="http://cnwanq.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>iOS如何实现分渠道打包</title>
+      <link>http://cnwanq.github.io/2018/12/ios%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%88%86%E6%B8%A0%E9%81%93%E6%89%93%E5%8C%85/</link>
+      <pubDate>Fri, 07 Dec 2018 12:08:22 +0800</pubDate>
+      
+      <guid>http://cnwanq.github.io/2018/12/ios%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%88%86%E6%B8%A0%E9%81%93%E6%89%93%E5%8C%85/</guid>
+      <description>  背景：
+APP里面之前添加了 Fabric Crashlytics 统计，现在想区分产线和开发环境的数据统计的数据。 这个需求非常像分渠道打包。
+ 如何部署 Fabric 先看看如何在 APP 部署 Fabric Get Start
+ 需要修改 TARGETS =&amp;gt; BUILD PHASES =&amp;gt; RUN SCRIPT 需要修改 Info.plist  通过 Jenkins 设置参数 目前项目中大家都通过 Jenkins 打 APP 的包。在 Jenkis 设置打包设置一个参数，来区分需要打的是哪个包，或者哪个渠道。
+在项目中新建一个 build_type.txt 文件，作为 flag 文件，文件内容默认为 develop。
+如果参数变为了 app-store 就会替换成其他的参数。
+通过 Jenkins 作为自动化，输入要打包的类别，实际的设置如下： 参考  (iOS 一套代码多APP／多渠道／多target+自动打包脚本)[https://www.jianshu.com/p/73343b4fc42b] (iOS使用脚本批量打渠道包)[https://blog.csdn.net/u010124617/article/details/46547523] (iOS自动化的打渠道包解决方案)[https://cloud.tencent.com/info/7ad0c70f2ce6873901d7e38a80449ad9.html]  </description>
+    </item>
     
     <item>
       <title>Objective-C编码规范</title>

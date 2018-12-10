@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ios on WanQ Notes</title>
-    <link>http://cnwanq.github.io/tags/ios/</link>
+    <link>http://cnwanq.github.io/categories/ios/</link>
     <description>Recent content in Ios on WanQ Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 07 Dec 2018 12:08:22 +0800</lastBuildDate>
     
-	<atom:link href="http://cnwanq.github.io/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://cnwanq.github.io/categories/ios/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -24,21 +24,6 @@ APP里面之前添加了 Fabric Crashlytics 统计，现在想区分产线和开
 在项目中新建一个 build_type.txt 文件，作为 flag 文件，文件内容默认为 develop。
 如果参数变为了 app-store 就会替换成其他的参数。
 通过 Jenkins 作为自动化，输入要打包的类别，实际的设置如下： 参考  (iOS 一套代码多APP／多渠道／多target+自动打包脚本)[https://www.jianshu.com/p/73343b4fc42b] (iOS使用脚本批量打渠道包)[https://blog.csdn.net/u010124617/article/details/46547523] (iOS自动化的打渠道包解决方案)[https://cloud.tencent.com/info/7ad0c70f2ce6873901d7e38a80449ad9.html]  </description>
-    </item>
-    
-    <item>
-      <title>Objective-C编码规范</title>
-      <link>http://cnwanq.github.io/2018/12/objective-c%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/</link>
-      <pubDate>Tue, 04 Dec 2018 15:25:39 +0800</pubDate>
-      
-      <guid>http://cnwanq.github.io/2018/12/objective-c%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/</guid>
-      <description>&lt;h1 id=&#34;objective-c-google-编码规范&#34;&gt;Objective-C Google 编码规范&lt;/h1&gt;
-
-&lt;h2 id=&#34;背景介绍&#34;&gt;背景介绍&lt;/h2&gt;
-
-&lt;p&gt;Objective-C 是 C 语言的扩展，增加了动态类型和面向对象的特性。它被设计成具有易读易用的，支持复杂的面向对象设计的编程语言。它是 MacOS 以及 iOS 的主要开发语言。&lt;/p&gt;
-
-&lt;p&gt;Cocoa 是 MacOX 上主要的应用程序框架之一。它是一组 Objective-C 类组成，为快速开发出功能齐全的 MacOX 应用程序提供支持。&lt;/p&gt;</description>
     </item>
     
   </channel>

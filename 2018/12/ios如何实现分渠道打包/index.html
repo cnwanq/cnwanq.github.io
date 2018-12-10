@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>iOS如何实现分渠道打包 | WanQ Notes</title>
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+
+    
+    <link rel="stylesheet" href="/assets/css/bulma.css">
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="stylesheet" href="/assets/css/core_flashy.css">
+
+</head>
+
+<body>
+    <div class="pageloader"></div>
+    <div class="infraloader is-active"></div>
+
+    
+    <div class="hero parallax is-cover is-relative is-default is-bold" data-background="/images/2012021709492293.jpg"
+        data-color="#000" data-color-opacity="0.3">
+        <nav class="navbar navbar-wrapper navbar-fade navbar-light is-transparent">
+            <div class="container">
+                
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="/">
+                        <img class="light-logo" src="/assets/images/logos/logo-white.svg" alt="">
+                        <img class="dark-logo" src="/assets/images/logos/logo.svg" alt="">
+                    </a>
+                    
+                    <div class="custom-burger" data-target="">
+                        <a id="" class="responsive-btn" href="javascript:void(0);">
+                            <span class="menu-toggle">
+                                <span class="icon-box-toggle">
+                                    <span class="rotate">
+                                        <i class="icon-line-top"></i>
+                                        <i class="icon-line-center"></i>
+                                        <i class="icon-line-bottom"></i>
+                                    </span>
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                    
+                </div>
+                
+                <div class="navbar-menu">
+                    
+                    <div class="navbar-start">
+                        
+                        <a class="navbar-item is-slide" href="/">
+                            首页
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+<div id="main-hero" class="hero-body blog-hero">
+        <div class="container has-text-centered">
+            <h1 class="title flex-title main-title text-bold is-2">
+                
+                <span class="material-icons is-hidden-mobile is-disabled" data-toggle="tooltip" data-placement="right" data-title="上一篇">keyboard_arrow_left</span>
+                
+                <span class="subpage-title">iOS如何实现分渠道打包</span>
+                
+                <a style="color:white" href="/2018/12/objective-c%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/"><span class="material-icons is-hidden-mobile" data-toggle="tooltip" data-placement="left" data-title="Objective-C编码规范">keyboard_arrow_right</span></a>
+                
+            </h1>
+        </div>
+    </div>
+    
+</div>
+
+
+
+<section class="section blog-section section-light-grey">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-10 is-offset-0">
+                
+                <div class="flex-card is-full-post light-bordered">
+                    
+                    <div class="post-meta content">
+                        
+                        <div class="title-block">
+                            <h2></h2>
+                            <h4>2018年12月7日</h4>
+                            <div><span>作者</span> <a class="author-name"><b>wanq</b></a></div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="post-body content">
+                        
+
+<blockquote>
+<p>背景：<br />
+APP里面之前添加了 Fabric Crashlytics 统计，现在想区分产线和开发环境的数据统计的数据。
+这个需求非常像分渠道打包。</p>
+</blockquote>
+
+<h2 id="如何部署-fabric">如何部署 Fabric</h2>
+
+<p>先看看如何在 APP 部署 Fabric
+<a href="https://fabric.io/kits/ios/crashlytics">Get Start</a></p>
+
+<p><img src="fabric.io_kits_ios_crashlytics_install.png" alt="add fabric png" /></p>
+
+<ul>
+<li>需要修改 TARGETS =&gt; BUILD PHASES =&gt; RUN SCRIPT</li>
+<li>需要修改 Info.plist</li>
+</ul>
+
+<h2 id="通过-jenkins-设置参数">通过 Jenkins 设置参数</h2>
+
+<p>目前项目中大家都通过 Jenkins 打 APP 的包。在 Jenkis 设置打包设置一个参数，来区分需要打的是哪个包，或者哪个渠道。</p>
+
+<p>在项目中新建一个 build_type.txt 文件，作为 flag 文件，文件内容默认为 <code>develop</code>。</p>
+
+<p><img src="WX20181210-180945@2x.png" alt="项目文件" /></p>
+
+<p><img src="WX20181210-181553@2x.png" alt="项目文件scirpts" /></p>
+
+<p>如果参数变为了 app-store 就会替换成其他的参数。</p>
+
+<p>通过 Jenkins 作为自动化，输入要打包的类别，实际的设置如下：
+<img src="WX20181210-182019@2x.png" alt="项目文件jinkinsscirpt" /></p>
+
+<h2 id="参考">参考</h2>
+
+<ul>
+<li>(iOS 一套代码多APP／多渠道／多target+自动打包脚本)[<a href="https://www.jianshu.com/p/73343b4fc42b">https://www.jianshu.com/p/73343b4fc42b</a>]</li>
+<li>(iOS使用脚本批量打渠道包)[<a href="https://blog.csdn.net/u010124617/article/details/46547523">https://blog.csdn.net/u010124617/article/details/46547523</a>]</li>
+<li>(iOS自动化的打渠道包解决方案)[<a href="https://cloud.tencent.com/info/7ad0c70f2ce6873901d7e38a80449ad9.html">https://cloud.tencent.com/info/7ad0c70f2ce6873901d7e38a80449ad9.html</a>]</li>
+</ul>
+
+
+                        
+                        <div class="share-post">
+                            <div class="share-text">
+                                Share:
+                            </div>
+                            
+                            <div class="sharing-options">
+                                <i class="fa fa-envelope"></i>
+                                <i class="fa fa-facebook"></i>
+                                <i class="fa fa-twitter"></i>
+                                <i class="fa fa-linkedin"></i>
+                                <i class="fa fa-google-plus"></i>
+                                <i class="fa fa-reddit"></i>
+                                <i class="fa fa-tumblr"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+
+
+<div id="disqus_thread" class="flex-card compose-card light-bordered">
+</div>
+
+
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://wanqme.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+            </div>
+            <div class="column">
+                <div class="flex-card light-bordered">
+                    <div class="card-header">TOC</div>
+                    <div class="card-panel">
+                        <div class="recent-posts">
+                            <div class="recent-post">
+                                <div class="post-title">
+                                    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#如何部署-fabric">如何部署 Fabric</a></li>
+<li><a href="#通过-jenkins-设置参数">通过 Jenkins 设置参数</a></li>
+<li><a href="#参考">参考</a></li>
+</ul></li>
+</ul>
+</nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<footer id="dark-footer" class="footer footer-blog">
+<div class="container">
+    <div class="columns">
+        <div class="column">
+            <div class="footer-column">
+
+                <div class="footer-header">
+                    <nav class="level is-mobile">
+                        <div class="level-left level-social">
+                            <a href="#" class="level-item">
+                                <span class="icon"><i class="fa fa-facebook"></i></span>
+                            </a>
+                            <a href="#" class="level-item">
+                                <span class="icon"><i class="fa fa-twitter"></i></span>
+                            </a>
+                            <a href="#" class="level-item">
+                                <span class="icon"><i class="fa fa-linkedin"></i></span>
+                            </a>
+                            <a href="#" class="level-item">
+                                <span class="icon"><i class="fa fa-dribbble"></i></span>
+                            </a>
+                            <a href="#" class="level-item">
+                                <span class="icon"><i class="fa fa-github"></i></span>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="copyright">
+                    <div>网站主题：<a class="button is-small is-primary" href="https://github.com/cnwanq/onewan.git">onewan</a></div>
+                    <span class="moto light-text">Copyright © 2018 WanQ All rights reserved. reserved.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</footer>
+        
+<div id="backtotop"><a href="#"></a></div>        
+<script src="/assets/js/app.js"></script>
+
+
+<script src="/assets/js/agency.js"></script>
+<script src="/assets/js/contact.js"></script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>
