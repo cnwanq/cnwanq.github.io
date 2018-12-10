@@ -23,12 +23,7 @@ APP里面之前添加了 Fabric Crashlytics 统计，现在想区分产线和开
 这个需求非常像分渠道打包。&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&#34;如何部署-fabric&#34;&gt;如何部署 Fabric&lt;/h2&gt;
-
-&lt;p&gt;先看看如何在 APP 部署 Fabric
-&lt;a href=&#34;https://fabric.io/kits/ios/crashlytics&#34;&gt;Get Start&lt;/a&gt;
-
-&lt;img src=&#34;fabric.io_kits_ios_crashlytics_install.png&#34; alt=&#34;add fabric png&#34; /&gt;&lt;/p&gt;</description>
+&lt;h2 id=&#34;如何部署-fabric&#34;&gt;如何部署 Fabric&lt;/h2&gt;</description>
     </item>
     
     <item>
