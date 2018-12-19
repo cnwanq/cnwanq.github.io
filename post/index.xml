@@ -6,10 +6,31 @@
     <description>Recent content in Posts on WanQ Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 10 Dec 2018 23:49:12 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 19 Dec 2018 15:31:08 +0800</lastBuildDate>
     
 	<atom:link href="http://cnwanq.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hello Flutter</title>
+      <link>http://cnwanq.github.io/2018/12/hello-flutter/</link>
+      <pubDate>Wed, 19 Dec 2018 15:31:08 +0800</pubDate>
+      
+      <guid>http://cnwanq.github.io/2018/12/hello-flutter/</guid>
+      <description>&lt;h1 id=&#34;flutter-是什么&#34;&gt;Flutter 是什么？&lt;/h1&gt;
+
+&lt;p&gt;Flutter 作为谷歌最近推出的跨平台开发框架，一经推出便吸引了不少注意。关于 Flutter，目前我们知道它是一个跨平台开发框架。但是它本身并不止于此，例如 Fuchsia、Dart 等，我们也都需要去了解。&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;这里不打算介绍如何在不同的平台安装 Flutter。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://flutter.io/&#34;&gt;flutter 入口&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://flutter.io/docs/get-started/install&#34;&gt;flutter 安装入口&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;目前 flutter 支持的开发工具有 xcode、 android studio、idea 和 vscode。个人推荐使用 android studio，为什么？因为开发体验好！
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Dart语言之旅</title>
