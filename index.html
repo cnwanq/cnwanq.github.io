@@ -94,6 +94,34 @@
                 
                 <div class="header has-background-image" data-background="./post/" style="background-color: rgb(0, 0, 0); opacity: 0.85;">
                     <div class="title-wrapper">
+                        <h2 class="post-title">flutter - 一个购物列表的例子</h2>
+                        
+                    </div>
+                    <div class="author-avatar"><img src="./images/swift.jpg" alt=""></div>
+                </div>
+                
+                <div class="post-body">
+                    <small>2018年12月19日</small>
+                    <div><span>作者</span> <a class="author-name"><b>wanq</b></a></div>
+                    <p>接下来演示一个程序，陈列商品的信息，点击售罄，再点击恢复状态。 源码如下：
+import 'package:flutter/material.dart'; class Product { const Product({this.name}); final String name; } typedef void CartChangedCallback(Product product, bool inCart); class ShoppingListItem extends StatelessWidget { ShoppingListItem({Product product, this.inCart, this.onCartChanged}) : product = product, super(key: ObjectKey(product)); final Product product; final bool inCart; final CartChangedCallback onCartChanged; Color _getColor(BuildContext context) { return inCart ? Colors.black54 : Theme.of(context).primaryColor; } TextStyle _getTextStyle(BuildContext context) { if (!inCart) return null; return TextStyle( color: Colors.black54, decoration: TextDecoration.lineThrough, ); } @override Widget build(BuildContext context) { return ListTile( onTap: () { onCartChanged(product, !</p>
+                    
+                    <div class="content-footer">
+                        <div class="footer-details">
+                            <a class="button is-link btn-upper" href="http://cnwanq.github.io/2018/12/flutter---%E4%B8%80%E4%B8%AA%E8%B4%AD%E7%89%A9%E5%88%97%E8%A1%A8%E7%9A%84%E4%BE%8B%E5%AD%90/">阅读更多</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+
+            
+            <div class="flex-card is-post light-bordered">
+                
+                <div class="header has-background-image" data-background="./post/" style="background-color: rgb(0, 0, 0); opacity: 0.85;">
+                    <div class="title-wrapper">
                         <h2 class="post-title">flutter - 状态显示</h2>
                         
                     </div>
@@ -399,41 +427,6 @@ APP里面之前添加了 Fabric Crashlytics 统计，现在想区分产线和开
             
             
 
-            
-            <div class="flex-card is-post light-bordered">
-                
-                <div class="header has-background-image" data-background="./post/" style="background-color: rgb(0, 0, 0); opacity: 0.85;">
-                    <div class="title-wrapper">
-                        <h2 class="post-title">Objective-C编码规范</h2>
-                        
-                        <h4 class="post-subtitle">google Objective-C 编码规范解读</h4>
-                        
-                    </div>
-                    <div class="author-avatar"><img src="./images/swift.jpg" alt=""></div>
-                </div>
-                
-                <div class="post-body">
-                    <small>2018年12月4日</small>
-                    <div><span>作者</span> <a class="author-name"><b>wanq</b></a></div>
-                    <p><h1 id="objective-c-google-编码规范">Objective-C Google 编码规范</h1>
-
-<h2 id="背景介绍">背景介绍</h2>
-
-<p>Objective-C 是 C 语言的扩展，增加了动态类型和面向对象的特性。它被设计成具有易读易用的，支持复杂的面向对象设计的编程语言。它是 MacOS 以及 iOS 的主要开发语言。</p>
-
-<p>Cocoa 是 MacOX 上主要的应用程序框架之一。它是一组 Objective-C 类组成，为快速开发出功能齐全的 MacOX 应用程序提供支持。</p></p>
-                    
-                    <div class="content-footer">
-                        <div class="footer-details">
-                            <a class="button is-link btn-upper" href="http://cnwanq.github.io/2018/12/objective-c%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/">阅读更多</a>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-            
-            
-
             <nav class="pagination">
     <a class="pagination-previous" disabled>Previous</a>
     <a href="/page/2/" class="pagination-next">Next</a>
@@ -458,6 +451,11 @@ APP里面之前添加了 Fabric Crashlytics 统计，现在想区分产线和开
                     <div class="card-header">近期文章</div>
                     <div class="card-panel">
                         <div class="recent-posts">
+                            <div class="recent-post">
+                                <div class="post-title">
+                                    <a href="/2018/12/flutter---%E4%B8%80%E4%B8%AA%E8%B4%AD%E7%89%A9%E5%88%97%E8%A1%A8%E7%9A%84%E4%BE%8B%E5%AD%90/">flutter - 一个购物列表的例子</a>
+                                </div>
+                            </div>
                             <div class="recent-post">
                                 <div class="post-title">
                                     <a href="/2018/12/flutter---%E7%8A%B6%E6%80%81%E6%98%BE%E7%A4%BA/">flutter - 状态显示</a>
@@ -503,11 +501,6 @@ APP里面之前添加了 Fabric Crashlytics 统计，现在想区分产线和开
                                     <a href="/2018/12/ios%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E5%88%86%E6%B8%A0%E9%81%93%E6%89%93%E5%8C%85/">iOS如何实现分渠道打包</a>
                                 </div>
                             </div>
-                            <div class="recent-post">
-                                <div class="post-title">
-                                    <a href="/2018/12/objective-c%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83/">Objective-C编码规范</a>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -526,7 +519,7 @@ APP里面之前添加了 Fabric Crashlytics 统计，现在想区分产线和开
                         </div>
                         <div class="post-category">
                             <span><a href="/categories/flutter">Flutter</a></span>
-                            <span class="b-badge badge-outlined rounded is-primary">5</span>
+                            <span class="b-badge badge-outlined rounded is-primary">6</span>
                         </div>
                         <div class="post-category">
                             <span><a href="/categories/hugo">Hugo</a></span>
