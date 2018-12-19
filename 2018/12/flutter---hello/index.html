@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>flutter - Hello | WanQ Notes</title>
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+
+    
+    <link rel="stylesheet" href="/assets/css/bulma.css">
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="stylesheet" href="/assets/css/core_flashy.css">
+
+</head>
+
+<body>
+    <div class="pageloader"></div>
+    <div class="infraloader is-active"></div>
+
+    
+    <div class="hero parallax is-cover is-relative is-default is-bold" data-background="/images/2012021709492293.jpg"
+        data-color="#000" data-color-opacity="0.3">
+        <nav class="navbar navbar-wrapper navbar-fade navbar-light is-transparent">
+            <div class="container">
+                
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="/">
+                        <img class="light-logo" src="/assets/images/logos/logo-white.svg" alt="">
+                        <img class="dark-logo" src="/assets/images/logos/logo.svg" alt="">
+                    </a>
+                    
+                    <div class="custom-burger" data-target="">
+                        <a id="" class="responsive-btn" href="javascript:void(0);">
+                            <span class="menu-toggle">
+                                <span class="icon-box-toggle">
+                                    <span class="rotate">
+                                        <i class="icon-line-top"></i>
+                                        <i class="icon-line-center"></i>
+                                        <i class="icon-line-bottom"></i>
+                                    </span>
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                    
+                </div>
+                
+                <div class="navbar-menu">
+                    
+                    <div class="navbar-start">
+                        
+                        <a class="navbar-item is-slide" href="/">
+                            首页
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+<div id="main-hero" class="hero-body blog-hero">
+        <div class="container has-text-centered">
+            <h1 class="title flex-title main-title text-bold is-2">
+                
+                <a style="color:white" href="/2018/12/flutter---%E5%9F%BA%E6%9C%AC-widgets/"><span class="material-icons is-hidden-mobile" data-toggle="tooltip" data-placement="right" data-title="flutter - 基本 Widgets">keyboard_arrow_left</span></a>
+                
+                <span class="subpage-title">flutter - Hello</span>
+                
+                <a style="color:white" href="/2018/12/dart%E8%AF%AD%E8%A8%80%E4%B9%8B%E6%97%85/"><span class="material-icons is-hidden-mobile" data-toggle="tooltip" data-placement="left" data-title="Dart语言之旅">keyboard_arrow_right</span></a>
+                
+            </h1>
+        </div>
+    </div>
+    
+</div>
+
+
+
+<section class="section blog-section section-light-grey">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-10 is-offset-0">
+                
+                <div class="flex-card is-full-post light-bordered">
+                    
+                    <div class="post-meta content">
+                        
+                        <div class="title-block">
+                            <h2></h2>
+                            <h4>2018年12月19日</h4>
+                            <div><span>作者</span> <a class="author-name"><b>wanq</b></a></div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="post-body content">
+                        <h1 id="flutter-是什么">Flutter 是什么？</h1>
+
+<p>Flutter 作为谷歌最近推出的跨平台开发框架，一经推出便吸引了不少注意。关于 Flutter，目前我们知道它是一个跨平台开发框架。但是它本身并不止于此，例如 Fuchsia、Dart 等，我们也都需要去了解。</p>
+
+<blockquote>
+<p>这里不打算介绍如何在不同的平台安装 Flutter。</p>
+</blockquote>
+
+<p><a href="https://flutter.io/">flutter 入口</a><br />
+<a href="https://flutter.io/docs/get-started/install">flutter 安装入口</a></p>
+
+<p>目前 flutter 支持的开发工具有 xcode、 android studio、idea 和 vscode。个人推荐使用 android studio，为什么？因为开发体验好！
+</p>
+
+<h2 id="创建-flutter-项目">创建 flutter 项目</h2>
+
+<p>加入我们即将创建一个项目 <code>hello_flutter</code>。所以我们需要先在确认好的 <code>workspace</code> 的路径。然后在输入创建命令：</p>
+
+<pre><code class="language-dart">flutter create hello_flutter
+</code></pre>
+
+<p>用 android studio 打开项目文件。
+<img src="/post/flutter/QQ20181219-155559@2x.png" alt="项目结构" /></p>
+
+<p>在目录 <code>lib</code> 有个文件 <code>main.dart</code> 程序的入口文件，其中有 <code>main</code> 方法。</p>
+
+<p>创建好的 <code>main.dart</code> 文件如下：</p>
+
+<pre><code class="language-dart">import 'package:flutter/material.dart';
+
+void main() =&gt; runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        // This is the theme of your application.
+        //
+        // Try running your application with &quot;flutter run&quot;. You'll see the
+        // application has a blue toolbar. Then, without quitting the app, try
+        // changing the primarySwatch below to Colors.green and then invoke
+        // &quot;hot reload&quot; (press &quot;r&quot; in the console where you ran &quot;flutter run&quot;,
+        // or simply save your changes to &quot;hot reload&quot; in a Flutter IDE).
+        // Notice that the counter didn't reset back to zero; the application
+        // is not restarted.
+        primarySwatch: Colors.blue,
+      ),
+      home: MyHomePage(title: 'Flutter Demo Home Page'),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key key, this.title}) : super(key: key);
+
+  // This widget is the home page of your application. It is stateful, meaning
+  // that it has a State object (defined below) that contains fields that affect
+  // how it looks.
+
+  // This class is the configuration for the state. It holds the values (in this
+  // case the title) provided by the parent (in this case the App widget) and
+  // used by the build method of the State. Fields in a Widget subclass are
+  // always marked &quot;final&quot;.
+
+  final String title;
+
+  @override
+  _MyHomePageState createState() =&gt; _MyHomePageState();
+}
+
+class _MyHomePageState extends State&lt;MyHomePage&gt; {
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      // This call to setState tells the Flutter framework that something has
+      // changed in this State, which causes it to rerun the build method below
+      // so that the display can reflect the updated values. If we changed
+      // _counter without calling setState(), then the build method would not be
+      // called again, and so nothing would appear to happen.
+      _counter++;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // This method is rerun every time setState is called, for instance as done
+    // by the _incrementCounter method above.
+    //
+    // The Flutter framework has been optimized to make rerunning build methods
+    // fast, so that you can just rebuild anything that needs updating rather
+    // than having to individually change instances of widgets.
+    return Scaffold(
+      appBar: AppBar(
+        // Here we take the value from the MyHomePage object that was created by
+        // the App.build method, and use it to set our appbar title.
+        title: Text(widget.title),
+      ),
+      body: Center(
+        // Center is a layout widget. It takes a single child and positions it
+        // in the middle of the parent.
+        child: Column(
+          // Column is also layout widget. It takes a list of children and
+          // arranges them vertically. By default, it sizes itself to fit its
+          // children horizontally, and tries to be as tall as its parent.
+          //
+          // Invoke &quot;debug painting&quot; (press &quot;p&quot; in the console, choose the
+          // &quot;Toggle Debug Paint&quot; action from the Flutter Inspector in Android
+          // Studio, or the &quot;Toggle Debug Paint&quot; command in Visual Studio Code)
+          // to see the wireframe for each widget.
+          //
+          // Column has various properties to control how it sizes itself and
+          // how it positions its children. Here we use mainAxisAlignment to
+          // center the children vertically; the main axis here is the vertical
+          // axis because Columns are vertical (the cross axis would be
+          // horizontal).
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: &lt;Widget&gt;[
+            Text(
+              'You have pushed the button this many times:',
+            ),
+            Text(
+              '$_counter',
+              style: Theme.of(context).textTheme.display1,
+            ),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: Icon(Icons.add),
+      ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
+</code></pre>
+
+<p>其中 <code>main</code> 方法用到了胖箭头</p>
+
+<pre><code class="language-dart">void main() =&gt; runApp(MyApp());
+</code></pre>
+
+<p>等价于</p>
+
+<pre><code class="language-dart">void main() {
+  runApp(MyApp());
+}
+</code></pre>
+
+<p>接下来我们修改下最简单的 <code>Hello</code> 程序</p>
+
+<pre><code class="language-dart">import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    Center(
+      child: Text(
+        'Hello, world!',
+        textDirection: TextDirection.ltr,
+      ),
+    ),
+  );
+}
+</code></pre>
+
+<p><code>runApp</code>里面放置<code>Widget</code>小部件，上面的例子中有两个<code>Widget</code>，分别是<code>Center</code>与<code>Text</code>。</p>
+
+<p>运行结果
+<img src="/post/flutter/QQ20181219-160652@2x.png" alt="hello demo" /></p>
+
+<p>在编写应用程序时，通常会创建作为<code>StatelessWidget</code>或<code>StatefulWidget</code>的子类的新窗口小部件，具体取决于窗口小部件是否管理任何状态。小部件的主要工作是实现构建函数，该函数根据其他较低级别的小部件描述小部件。框架依次构建这些小部件，直到该过程在代表底层<code>RenderObject</code>的小部件中达到最低点，该小部件计算并描述小部件的几何形状。</p>
+
+                        
+                        <div class="share-post">
+                            <div class="share-text">
+                                Share:
+                            </div>
+                            
+                            <div class="sharing-options">
+                                <i class="fa fa-envelope"></i>
+                                <i class="fa fa-facebook"></i>
+                                <i class="fa fa-twitter"></i>
+                                <i class="fa fa-linkedin"></i>
+                                <i class="fa fa-google-plus"></i>
+                                <i class="fa fa-reddit"></i>
+                                <i class="fa fa-tumblr"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+
+
+<div id="disqus_thread" class="flex-card compose-card light-bordered">
+</div>
+
+
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://wanqme.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+            </div>
+            <div class="column">
+                <div class="flex-card light-bordered">
+                    <div class="card-header">TOC</div>
+                    <div class="card-panel">
+                        <div class="recent-posts">
+                            <div class="recent-post">
+                                <div class="post-title">
+                                    <nav id="TableOfContents">
+<ul>
+<li><a href="#flutter-是什么">Flutter 是什么？</a>
+<ul>
+<li><a href="#创建-flutter-项目">创建 flutter 项目</a></li>
+</ul></li>
+</ul>
+</nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<footer id="dark-footer" class="footer footer-blog">
+<div class="container">
+    <div class="columns">
+        <div class="column">
+            <div class="footer-column">
+
+                <div class="footer-header">
+                    <nav class="level is-mobile">
+                        <div class="level-left level-social">
+                            <a href="#" class="level-item">
+                                <span class="icon"><i class="fa fa-facebook"></i></span>
+                            </a>
+                            <a href="#" class="level-item">
+                                <span class="icon"><i class="fa fa-twitter"></i></span>
+                            </a>
+                            <a href="#" class="level-item">
+                                <span class="icon"><i class="fa fa-linkedin"></i></span>
+                            </a>
+                            <a href="#" class="level-item">
+                                <span class="icon"><i class="fa fa-dribbble"></i></span>
+                            </a>
+                            <a href="#" class="level-item">
+                                <span class="icon"><i class="fa fa-github"></i></span>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="copyright">
+                    <div>网站主题：<a class="button is-small is-primary" href="https://github.com/cnwanq/onewan.git">onewan</a></div>
+                    <span class="moto light-text">Copyright © 2018 WanQ All rights reserved. reserved.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</footer>
+        
+<div id="backtotop"><a href="#"></a></div>        
+<script src="/assets/js/app.js"></script>
+
+
+<script src="/assets/js/agency.js"></script>
+<script src="/assets/js/contact.js"></script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

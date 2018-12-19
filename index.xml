@@ -12,11 +12,11 @@
     
     
     <item>
-      <title>状态显示</title>
-      <link>http://cnwanq.github.io/2018/12/%E7%8A%B6%E6%80%81%E6%98%BE%E7%A4%BA/</link>
+      <title>flutter - 状态显示</title>
+      <link>http://cnwanq.github.io/2018/12/flutter---%E7%8A%B6%E6%80%81%E6%98%BE%E7%A4%BA/</link>
       <pubDate>Wed, 19 Dec 2018 18:37:18 +0800</pubDate>
       
-      <guid>http://cnwanq.github.io/2018/12/%E7%8A%B6%E6%80%81%E6%98%BE%E7%A4%BA/</guid>
+      <guid>http://cnwanq.github.io/2018/12/flutter---%E7%8A%B6%E6%80%81%E6%98%BE%E7%A4%BA/</guid>
       <description>&lt;p&gt;前面，我们用到的都是无状态的部件，接下来我们要接触有状态的部件。
 &lt;/p&gt;</description>
     </item>
@@ -32,11 +32,11 @@
     </item>
     
     <item>
-      <title>使用 Material 部件</title>
-      <link>http://cnwanq.github.io/2018/12/%E4%BD%BF%E7%94%A8-material-%E9%83%A8%E4%BB%B6/</link>
+      <title>flutter - 使用 Material 部件</title>
+      <link>http://cnwanq.github.io/2018/12/flutter---%E4%BD%BF%E7%94%A8-material-%E9%83%A8%E4%BB%B6/</link>
       <pubDate>Wed, 19 Dec 2018 17:36:25 +0800</pubDate>
       
-      <guid>http://cnwanq.github.io/2018/12/%E4%BD%BF%E7%94%A8-material-%E9%83%A8%E4%BB%B6/</guid>
+      <guid>http://cnwanq.github.io/2018/12/flutter---%E4%BD%BF%E7%94%A8-material-%E9%83%A8%E4%BB%B6/</guid>
       <description>&lt;p&gt;Flutter 提供的组件都遵循 Google 的 Material Design。一个 Material App 都是从 &lt;code&gt;MaterialApp&lt;/code&gt; widget 开始，并且会包含一个导航 &lt;code&gt;Navigator&lt;/code&gt;。&lt;/p&gt;
 
 &lt;p&gt;看代码实例:
@@ -44,11 +44,11 @@
     </item>
     
     <item>
-      <title>基本 Widgets</title>
-      <link>http://cnwanq.github.io/2018/12/%E5%9F%BA%E6%9C%AC-widgets/</link>
+      <title>flutter - 基本 Widgets</title>
+      <link>http://cnwanq.github.io/2018/12/flutter---%E5%9F%BA%E6%9C%AC-widgets/</link>
       <pubDate>Wed, 19 Dec 2018 16:53:50 +0800</pubDate>
       
-      <guid>http://cnwanq.github.io/2018/12/%E5%9F%BA%E6%9C%AC-widgets/</guid>
+      <guid>http://cnwanq.github.io/2018/12/flutter---%E5%9F%BA%E6%9C%AC-widgets/</guid>
       <description>&lt;p&gt;&lt;code&gt;Flutter&lt;/code&gt;有一套非常灵活的基本的&lt;code&gt;widget&lt;/code&gt;。经常会用到的有：
 * Text: 文本部件可以创建一系列样式的文本
 * Row, Column: 布局部件，横向布局与垂直布局。借鉴与 web 里面的 flex 布局
@@ -59,11 +59,11 @@
     </item>
     
     <item>
-      <title>Hello Flutter</title>
-      <link>http://cnwanq.github.io/2018/12/hello-flutter/</link>
+      <title>flutter - Hello</title>
+      <link>http://cnwanq.github.io/2018/12/flutter---hello/</link>
       <pubDate>Wed, 19 Dec 2018 15:31:08 +0800</pubDate>
       
-      <guid>http://cnwanq.github.io/2018/12/hello-flutter/</guid>
+      <guid>http://cnwanq.github.io/2018/12/flutter---hello/</guid>
       <description>&lt;h1 id=&#34;flutter-是什么&#34;&gt;Flutter 是什么？&lt;/h1&gt;
 
 &lt;p&gt;Flutter 作为谷歌最近推出的跨平台开发框架，一经推出便吸引了不少注意。关于 Flutter，目前我们知道它是一个跨平台开发框架。但是它本身并不止于此，例如 Fuchsia、Dart 等，我们也都需要去了解。&lt;/p&gt;
