@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>使用 Material 部件 | WanQ Notes</title>
+    <title>状态显示 | WanQ Notes</title>
     <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
 
     
@@ -67,11 +67,11 @@
         <div class="container has-text-centered">
             <h1 class="title flex-title main-title text-bold is-2">
                 
-                <a style="color:white" href="/2018/12/%E6%89%8B%E5%8A%BF%E5%A4%84%E7%90%86/"><span class="material-icons is-hidden-mobile" data-toggle="tooltip" data-placement="right" data-title="手势处理">keyboard_arrow_left</span></a>
+                <span class="material-icons is-hidden-mobile is-disabled" data-toggle="tooltip" data-placement="right" data-title="上一篇">keyboard_arrow_left</span>
                 
-                <span class="subpage-title">使用 Material 部件</span>
+                <span class="subpage-title">状态显示</span>
                 
-                <a style="color:white" href="/2018/12/%E5%9F%BA%E6%9C%AC-widgets/"><span class="material-icons is-hidden-mobile" data-toggle="tooltip" data-placement="left" data-title="基本 Widgets">keyboard_arrow_right</span></a>
+                <a style="color:white" href="/2018/12/%E6%89%8B%E5%8A%BF%E5%A4%84%E7%90%86/"><span class="material-icons is-hidden-mobile" data-toggle="tooltip" data-placement="left" data-title="手势处理">keyboard_arrow_right</span></a>
                 
             </h1>
         </div>
@@ -99,9 +99,7 @@
 
                     
                     <div class="post-body content">
-                        <p>Flutter 提供的组件都遵循 Google 的 Material Design。一个 Material App 都是从 <code>MaterialApp</code> widget 开始，并且会包含一个导航 <code>Navigator</code>。</p>
-
-<p>看代码实例:
+                        <p>前面，我们用到的都是无状态的部件，接下来我们要接触有状态的部件。
 </p>
 
 <pre><code class="language-dart">import 'package:flutter/material.dart';
@@ -128,7 +126,7 @@ class TutorialHome extends StatelessWidget {
         ],
       ),
       body: Center(
-        child: Text('Hello, world!'),
+        child: Counter(),
       ),
       floatingActionButton: FloatingActionButton(
         tooltip: 'Add',
@@ -138,12 +136,41 @@ class TutorialHome extends StatelessWidget {
     );
   }
 }
+
+class Counter extends StatefulWidget {
+
+  @override
+  State createState() {
+    return _CounterState();
+  }
+}
+
+class _CounterState extends State&lt;Counter&gt; {
+  int _counter = 0;
+  
+  void _increment() {
+    setState(() {
+      _counter++;
+    });
+  }
+  
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: &lt;Widget&gt;[
+        RaisedButton(
+          onPressed: _increment,
+          child: Text('Increment'),
+        ),
+        Text('Count: $_counter'),
+      ],
+    );
+  }
+}
 </code></pre>
 
 <p>运行结果
-<img src="/post/flutter/QQ20181219-174955@2x.png" alt="hello demo" /></p>
-
-<p><a href="https://flutter.io/docs/development/ui/widgets/material">更多的 material components</a></p>
+<img src="/post/flutter/QQ20181219-184900@2x.png" alt="hello demo" /></p>
 
                         
                         <div class="share-post">

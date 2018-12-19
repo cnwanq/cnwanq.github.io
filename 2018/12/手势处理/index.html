@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>使用 Material 部件 | WanQ Notes</title>
+    <title>手势处理 | WanQ Notes</title>
     <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
 
     
@@ -67,11 +67,11 @@
         <div class="container has-text-centered">
             <h1 class="title flex-title main-title text-bold is-2">
                 
-                <a style="color:white" href="/2018/12/%E6%89%8B%E5%8A%BF%E5%A4%84%E7%90%86/"><span class="material-icons is-hidden-mobile" data-toggle="tooltip" data-placement="right" data-title="手势处理">keyboard_arrow_left</span></a>
+                <a style="color:white" href="/2018/12/%E7%8A%B6%E6%80%81%E6%98%BE%E7%A4%BA/"><span class="material-icons is-hidden-mobile" data-toggle="tooltip" data-placement="right" data-title="状态显示">keyboard_arrow_left</span></a>
                 
-                <span class="subpage-title">使用 Material 部件</span>
+                <span class="subpage-title">手势处理</span>
                 
-                <a style="color:white" href="/2018/12/%E5%9F%BA%E6%9C%AC-widgets/"><span class="material-icons is-hidden-mobile" data-toggle="tooltip" data-placement="left" data-title="基本 Widgets">keyboard_arrow_right</span></a>
+                <a style="color:white" href="/2018/12/%E4%BD%BF%E7%94%A8-material-%E9%83%A8%E4%BB%B6/"><span class="material-icons is-hidden-mobile" data-toggle="tooltip" data-placement="left" data-title="使用 Material 部件">keyboard_arrow_right</span></a>
                 
             </h1>
         </div>
@@ -99,9 +99,7 @@
 
                     
                     <div class="post-body content">
-                        <p>Flutter 提供的组件都遵循 Google 的 Material Design。一个 Material App 都是从 <code>MaterialApp</code> widget 开始，并且会包含一个导航 <code>Navigator</code>。</p>
-
-<p>看代码实例:
+                        <p>目前几乎所有的APP都会有用户的交互。实现交互的第一步是要检测用户输入的手势，接下来我们创建一个有交互的按钮
 </p>
 
 <pre><code class="language-dart">import 'package:flutter/material.dart';
@@ -128,7 +126,7 @@ class TutorialHome extends StatelessWidget {
         ],
       ),
       body: Center(
-        child: Text('Hello, world!'),
+        child: MyButton(),
       ),
       floatingActionButton: FloatingActionButton(
         tooltip: 'Add',
@@ -138,12 +136,40 @@ class TutorialHome extends StatelessWidget {
     );
   }
 }
+
+class MyButton extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        print('MyButton was tapped!');
+      },
+      child: Container(
+        height: 36.0,
+        padding: const EdgeInsets.all(8.0),
+        margin: const EdgeInsets.symmetric(horizontal: 8.0),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5.0),
+          color: Colors.lightGreen[500],
+        ),
+        child: Center(
+          child: Text('Button'),
+        ),
+      ),
+    );
+  }
+}
 </code></pre>
 
-<p>运行结果
-<img src="/post/flutter/QQ20181219-174955@2x.png" alt="hello demo" /></p>
+<p><code>GestureDetector</code>部件没有视觉表现，而是检测用户的交互。
+当用户点击<code>Container</code>时，<code>GestureDetector</code>会调用其<code>onTap</code>回调，在这种情况下会向控制台打印一条消息。您可以使用<code>GestureDetector</code>检测各种输入手势，包括点击，拖动和缩放。</p>
 
-<p><a href="https://flutter.io/docs/development/ui/widgets/material">更多的 material components</a></p>
+<p>演示：
+<img src="/post/flutter/QQ20181219-181901@2x.png" alt="gesture widget demo" />
+<img src="/post/flutter/QQ20181219-181918@2x.png" alt="gesture widget consol demo" /></p>
+
+<p><a href="https://flutter.io/docs/development/ui/advanced/gestures">更多的 Gestures</a></p>
 
                         
                         <div class="share-post">
