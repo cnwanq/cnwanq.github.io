@@ -22,11 +22,11 @@
     </item>
     
     <item>
-      <title>手势处理</title>
-      <link>http://cnwanq.github.io/2018/12/%E6%89%8B%E5%8A%BF%E5%A4%84%E7%90%86/</link>
+      <title>flutter - 手势处理</title>
+      <link>http://cnwanq.github.io/2018/12/flutter---%E6%89%8B%E5%8A%BF%E5%A4%84%E7%90%86/</link>
       <pubDate>Wed, 19 Dec 2018 18:06:29 +0800</pubDate>
       
-      <guid>http://cnwanq.github.io/2018/12/%E6%89%8B%E5%8A%BF%E5%A4%84%E7%90%86/</guid>
+      <guid>http://cnwanq.github.io/2018/12/flutter---%E6%89%8B%E5%8A%BF%E5%A4%84%E7%90%86/</guid>
       <description>&lt;p&gt;目前几乎所有的APP都会有用户的交互。实现交互的第一步是要检测用户输入的手势，接下来我们创建一个有交互的按钮
 &lt;/p&gt;</description>
     </item>
