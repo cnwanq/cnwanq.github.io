@@ -103,9 +103,10 @@
                 <div class="post-body">
                     <small>2018年12月19日</small>
                     <div><span>作者</span> <a class="author-name"><b>wanq</b></a></div>
-                    <p>Flutter 提供的组件都遵循 Google 的 Material Design。一个 Material App 都是从 MaterialApp widget 开始，并且会包含一个导航 Navigator。
-看代码实例:
-import 'package:flutter/material.dart'; void main() =&gt; runApp(MaterialApp( title: 'Flutter Tutorail', home: TutorialHome(), )); class TutorialHome extends StatelessWidget { @override Widget build(BuildContext context) { return Scaffold( appBar: AppBar( leading: IconButton(icon: Icon(Icons.menu), tooltip: 'Navigation menu', onPressed: null), title: Text('Example title'), actions: &lt;Widget&gt;[ IconButton( icon: Icon(Icons.search), tooltip: 'Search', onPressed: null, ) ], ), body: Center( child: Text('Hello, world!'), ), floatingActionButton: FloatingActionButton( tooltip: 'Add', child: Icon(Icons.</p>
+                    <p><p>Flutter 提供的组件都遵循 Google 的 Material Design。一个 Material App 都是从 <code>MaterialApp</code> widget 开始，并且会包含一个导航 <code>Navigator</code>。</p>
+
+<p>看代码实例:
+</p></p>
                     
                     <div class="content-footer">
                         <div class="footer-details">
@@ -132,9 +133,13 @@ import 'package:flutter/material.dart'; void main() =&gt; runApp(MaterialApp( ti
                 <div class="post-body">
                     <small>2018年12月19日</small>
                     <div><span>作者</span> <a class="author-name"><b>wanq</b></a></div>
-                    <p>Flutter有一套非常灵活的基本的widget。经常会用到的有： * Text: 文本部件可以创建一系列样式的文本 * Row, Column: 布局部件，横向布局与垂直布局。借鉴与 web 里面的 flex 布局 * Stack: 布局部件，允许按照部件添加顺序堆叠咋一起。可以通过分别设置上左下右，来调整位置。 * Container: 容器部件，创建矩形可视元素。可以使用BoxDecoration装饰容器，例如背景，边框或阴影。 Container也可以在其大小上应用边距，填充和约束。另外，可以使用矩阵在三维空
-下面是一些简单的小部件 demo，它们结合了这些小部件和其他小部件：
-import 'package:flutter/material.dart'; class MyAppBar extends StatelessWidget { MyAppBar({this.title}); final Widget title; @override Widget build(BuildContext context) { return Container( height: 88.0, padding: const EdgeInsets.fromLTRB(8, 44, 8, 0), decoration: BoxDecoration(color: Colors.blue[500]), child: Row( children: &lt;Widget&gt;[ IconButton( icon: Icon(Icons.menu), tooltip: 'Navigation menu', onPressed: null, ), Expanded( child: title, ), IconButton( icon: Icon(Icons.search), tooltip: 'Search', onPressed: null, ) ], ), ); } } class MyScaffold extends StatelessWidget { @override Widget build(BuildContext context) { return Material( child: Column( children: &lt;Widget&gt;[ MyAppBar( title: Text( 'Example title', style: Theme.</p>
+                    <p><p><code>Flutter</code>有一套非常灵活的基本的<code>widget</code>。经常会用到的有：
+* Text: 文本部件可以创建一系列样式的文本
+* Row, Column: 布局部件，横向布局与垂直布局。借鉴与 web 里面的 flex 布局
+* Stack: 布局部件，允许按照部件添加顺序堆叠咋一起。可以通过分别设置上左下右，来调整位置。
+* Container: 容器部件，创建矩形可视元素。可以使用BoxDecoration装饰容器，例如背景，边框或阴影。 Container也可以在其大小上应用边距，填充和约束。另外，可以使用矩阵在三维空
+
+下面是一些简单的小部件 demo，它们结合了这些小部件和其他小部件：</p></p>
                     
                     <div class="content-footer">
                         <div class="footer-details">
