@@ -94,6 +94,64 @@
                 
                 <div class="header has-background-image" data-background="./post/" style="background-color: rgb(0, 0, 0); opacity: 0.85;">
                     <div class="title-wrapper">
+                        <h2 class="post-title">使用 Material 部件</h2>
+                        
+                    </div>
+                    <div class="author-avatar"><img src="./images/swift.jpg" alt=""></div>
+                </div>
+                
+                <div class="post-body">
+                    <small>2018年12月19日</small>
+                    <div><span>作者</span> <a class="author-name"><b>wanq</b></a></div>
+                    <p>Flutter 提供的组件都遵循 Google 的 Material Design。一个 Material App 都是从 MaterialApp widget 开始，并且会包含一个导航 Navigator。
+看代码实例:
+import 'package:flutter/material.dart'; void main() =&gt; runApp(MaterialApp( title: 'Flutter Tutorail', home: TutorialHome(), )); class TutorialHome extends StatelessWidget { @override Widget build(BuildContext context) { return Scaffold( appBar: AppBar( leading: IconButton(icon: Icon(Icons.menu), tooltip: 'Navigation menu', onPressed: null), title: Text('Example title'), actions: &lt;Widget&gt;[ IconButton( icon: Icon(Icons.search), tooltip: 'Search', onPressed: null, ) ], ), body: Center( child: Text('Hello, world!'), ), floatingActionButton: FloatingActionButton( tooltip: 'Add', child: Icon(Icons.</p>
+                    
+                    <div class="content-footer">
+                        <div class="footer-details">
+                            <a class="button is-link btn-upper" href="http://cnwanq.github.io/2018/12/%E4%BD%BF%E7%94%A8-material-%E9%83%A8%E4%BB%B6/">阅读更多</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+
+            
+            <div class="flex-card is-post light-bordered">
+                
+                <div class="header has-background-image" data-background="./post/" style="background-color: rgb(0, 0, 0); opacity: 0.85;">
+                    <div class="title-wrapper">
+                        <h2 class="post-title">基本 Widgets</h2>
+                        
+                    </div>
+                    <div class="author-avatar"><img src="./images/swift.jpg" alt=""></div>
+                </div>
+                
+                <div class="post-body">
+                    <small>2018年12月19日</small>
+                    <div><span>作者</span> <a class="author-name"><b>wanq</b></a></div>
+                    <p>Flutter有一套非常灵活的基本的widget。经常会用到的有： * Text: 文本部件可以创建一系列样式的文本 * Row, Column: 布局部件，横向布局与垂直布局。借鉴与 web 里面的 flex 布局 * Stack: 布局部件，允许按照部件添加顺序堆叠咋一起。可以通过分别设置上左下右，来调整位置。 * Container: 容器部件，创建矩形可视元素。可以使用BoxDecoration装饰容器，例如背景，边框或阴影。 Container也可以在其大小上应用边距，填充和约束。另外，可以使用矩阵在三维空
+下面是一些简单的小部件 demo，它们结合了这些小部件和其他小部件：
+import 'package:flutter/material.dart'; class MyAppBar extends StatelessWidget { MyAppBar({this.title}); final Widget title; @override Widget build(BuildContext context) { return Container( height: 88.0, padding: const EdgeInsets.fromLTRB(8, 44, 8, 0), decoration: BoxDecoration(color: Colors.blue[500]), child: Row( children: &lt;Widget&gt;[ IconButton( icon: Icon(Icons.menu), tooltip: 'Navigation menu', onPressed: null, ), Expanded( child: title, ), IconButton( icon: Icon(Icons.search), tooltip: 'Search', onPressed: null, ) ], ), ); } } class MyScaffold extends StatelessWidget { @override Widget build(BuildContext context) { return Material( child: Column( children: &lt;Widget&gt;[ MyAppBar( title: Text( 'Example title', style: Theme.</p>
+                    
+                    <div class="content-footer">
+                        <div class="footer-details">
+                            <a class="button is-link btn-upper" href="http://cnwanq.github.io/2018/12/%E5%9F%BA%E6%9C%AC-widgets/">阅读更多</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+
+            
+            <div class="flex-card is-post light-bordered">
+                
+                <div class="header has-background-image" data-background="./post/" style="background-color: rgb(0, 0, 0); opacity: 0.85;">
+                    <div class="title-wrapper">
                         <h2 class="post-title">Hello Flutter</h2>
                         
                     </div>
@@ -381,52 +439,17 @@ APP里面之前添加了 Fabric Crashlytics 统计，现在想区分产线和开
             
             
 
-            
-            <div class="flex-card is-post light-bordered">
-                
-                <div class="header has-background-image" data-background="./post/hugo-banner.png" style="background-color: rgb(0, 0, 0); opacity: 0.85;">
-                    <div class="title-wrapper">
-                        <h2 class="post-title">Hello Hugo</h2>
-                        
-                        <h4 class="post-subtitle">Hugo 是一个非常好的文档建站工具</h4>
-                        
-                    </div>
-                    <div class="author-avatar"><img src="./images/swift.jpg" alt=""></div>
-                </div>
-                
-                <div class="post-body">
-                    <small>2018年11月30日</small>
-                    <div><span>作者</span> <a class="author-name"><b>wanq</b></a></div>
-                    <p><blockquote>
-<p>本博客是有<code>Hugo</code>搭建的，那么首先就来介绍下如何使用<code>Hugo</code>快捷的搭建博客网站</p>
-</blockquote>
-
-<h1 id="hello-hugo">Hello Hugo</h1>
-
-<p><code>Hugo</code>是什么呢？
-<code>Hugo</code>是由<code>Go</code>语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。<br />
-这是它的网址 <a href="https://gohugo.io/">Hugo Link</a>
-</p></p>
-                    
-                    <div class="content-footer">
-                        <div class="footer-details">
-                            <a class="button is-link btn-upper" href="http://cnwanq.github.io/2018/11/hello-hugo/">阅读更多</a>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-            
-            
-
             <nav class="pagination">
     <a class="pagination-previous" disabled>Previous</a>
-    <a class="pagination-next" disabled>Next</a>
+    <a href="/page/2/" class="pagination-next">Next</a>
   
     <ul class="pagination-list">
   
       <li><a href="/" class="pagination-link is-current">
         1
+      </a></li>
+      <li><a href="/page/2/" class="pagination-link">
+        2
       </a></li>
   
     </ul>
@@ -440,6 +463,16 @@ APP里面之前添加了 Fabric Crashlytics 统计，现在想区分产线和开
                     <div class="card-header">近期文章</div>
                     <div class="card-panel">
                         <div class="recent-posts">
+                            <div class="recent-post">
+                                <div class="post-title">
+                                    <a href="/2018/12/%E4%BD%BF%E7%94%A8-material-%E9%83%A8%E4%BB%B6/">使用 Material 部件</a>
+                                </div>
+                            </div>
+                            <div class="recent-post">
+                                <div class="post-title">
+                                    <a href="/2018/12/%E5%9F%BA%E6%9C%AC-widgets/">基本 Widgets</a>
+                                </div>
+                            </div>
                             <div class="recent-post">
                                 <div class="post-title">
                                     <a href="/2018/12/hello-flutter/">Hello Flutter</a>
@@ -480,11 +513,6 @@ APP里面之前添加了 Fabric Crashlytics 统计，现在想区分产线和开
                                     <a href="/2018/12/hugo-theme---onewan/">Hugo Theme - onewan</a>
                                 </div>
                             </div>
-                            <div class="recent-post">
-                                <div class="post-title">
-                                    <a href="/2018/11/hello-hugo/">Hello Hugo</a>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -503,7 +531,7 @@ APP里面之前添加了 Fabric Crashlytics 统计，现在想区分产线和开
                         </div>
                         <div class="post-category">
                             <span><a href="/categories/flutter">Flutter</a></span>
-                            <span class="b-badge badge-outlined rounded is-primary">1</span>
+                            <span class="b-badge badge-outlined rounded is-primary">3</span>
                         </div>
                         <div class="post-category">
                             <span><a href="/categories/hugo">Hugo</a></span>

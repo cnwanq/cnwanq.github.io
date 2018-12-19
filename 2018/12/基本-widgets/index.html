@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>基本 Widgets | WanQ Notes</title>
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+
+    
+    <link rel="stylesheet" href="/assets/css/bulma.css">
+    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="stylesheet" href="/assets/css/core_flashy.css">
+
+</head>
+
+<body>
+    <div class="pageloader"></div>
+    <div class="infraloader is-active"></div>
+
+    
+    <div class="hero parallax is-cover is-relative is-default is-bold" data-background="/images/2012021709492293.jpg"
+        data-color="#000" data-color-opacity="0.3">
+        <nav class="navbar navbar-wrapper navbar-fade navbar-light is-transparent">
+            <div class="container">
+                
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="/">
+                        <img class="light-logo" src="/assets/images/logos/logo-white.svg" alt="">
+                        <img class="dark-logo" src="/assets/images/logos/logo.svg" alt="">
+                    </a>
+                    
+                    <div class="custom-burger" data-target="">
+                        <a id="" class="responsive-btn" href="javascript:void(0);">
+                            <span class="menu-toggle">
+                                <span class="icon-box-toggle">
+                                    <span class="rotate">
+                                        <i class="icon-line-top"></i>
+                                        <i class="icon-line-center"></i>
+                                        <i class="icon-line-bottom"></i>
+                                    </span>
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                    
+                </div>
+                
+                <div class="navbar-menu">
+                    
+                    <div class="navbar-start">
+                        
+                        <a class="navbar-item is-slide" href="/">
+                            首页
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+<div id="main-hero" class="hero-body blog-hero">
+        <div class="container has-text-centered">
+            <h1 class="title flex-title main-title text-bold is-2">
+                
+                <a style="color:white" href="/2018/12/%E4%BD%BF%E7%94%A8-material-%E9%83%A8%E4%BB%B6/"><span class="material-icons is-hidden-mobile" data-toggle="tooltip" data-placement="right" data-title="使用 Material 部件">keyboard_arrow_left</span></a>
+                
+                <span class="subpage-title">基本 Widgets</span>
+                
+                <a style="color:white" href="/2018/12/hello-flutter/"><span class="material-icons is-hidden-mobile" data-toggle="tooltip" data-placement="left" data-title="Hello Flutter">keyboard_arrow_right</span></a>
+                
+            </h1>
+        </div>
+    </div>
+    
+</div>
+
+
+
+<section class="section blog-section section-light-grey">
+    <div class="container">
+        <div class="columns">
+            <div class="column is-10 is-offset-0">
+                
+                <div class="flex-card is-full-post light-bordered">
+                    
+                    <div class="post-meta content">
+                        
+                        <div class="title-block">
+                            <h2></h2>
+                            <h4>2018年12月19日</h4>
+                            <div><span>作者</span> <a class="author-name"><b>wanq</b></a></div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="post-body content">
+                        <p><code>Flutter</code>有一套非常灵活的基本的<code>widget</code>。经常会用到的有：
+* Text: 文本部件可以创建一系列样式的文本
+* Row, Column: 布局部件，横向布局与垂直布局。借鉴与 web 里面的 flex 布局
+* Stack: 布局部件，允许按照部件添加顺序堆叠咋一起。可以通过分别设置上左下右，来调整位置。
+* Container: 容器部件，创建矩形可视元素。可以使用BoxDecoration装饰容器，例如背景，边框或阴影。 Container也可以在其大小上应用边距，填充和约束。另外，可以使用矩阵在三维空</p>
+
+<p>下面是一些简单的小部件 demo，它们结合了这些小部件和其他小部件：</p>
+
+<pre><code class="language-dart">import 'package:flutter/material.dart';
+
+class MyAppBar extends StatelessWidget {
+  MyAppBar({this.title});
+
+  final Widget title;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 88.0,
+      padding: const EdgeInsets.fromLTRB(8, 44, 8, 0),
+      decoration: BoxDecoration(color: Colors.blue[500]),
+      child: Row(
+        children: &lt;Widget&gt;[
+          IconButton(
+            icon: Icon(Icons.menu),
+            tooltip: 'Navigation menu',
+            onPressed: null,
+          ),
+          Expanded(
+            child: title,
+          ),
+          IconButton(
+            icon: Icon(Icons.search),
+            tooltip: 'Search',
+            onPressed: null,
+          )
+        ],
+      ),
+    );
+  }
+}
+
+class MyScaffold extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      child: Column(
+        children: &lt;Widget&gt;[
+          MyAppBar(
+            title: Text(
+              'Example title',
+              style: Theme.of(context).primaryTextTheme.title,
+            ),
+          ),
+          Expanded(
+            child: Center(
+              child: Text('Hello, world!'),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+void main() {
+  runApp(MaterialApp(
+    title: 'My app',
+    home: MyScaffold(),
+  ));
+}
+</code></pre>
+
+<p>运行界面
+<img src="/post/flutter/QQ20181219-172802@2x.png" alt="basic widget demo" /></p>
+
+
+                        
+                        <div class="share-post">
+                            <div class="share-text">
+                                Share:
+                            </div>
+                            
+                            <div class="sharing-options">
+                                <i class="fa fa-envelope"></i>
+                                <i class="fa fa-facebook"></i>
+                                <i class="fa fa-twitter"></i>
+                                <i class="fa fa-linkedin"></i>
+                                <i class="fa fa-google-plus"></i>
+                                <i class="fa fa-reddit"></i>
+                                <i class="fa fa-tumblr"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+
+
+<div id="disqus_thread" class="flex-card compose-card light-bordered">
+</div>
+
+
+<script>
+
+
+
+
+
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://wanqme.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+            </div>
+            <div class="column">
+                <div class="flex-card light-bordered">
+                    <div class="card-header">TOC</div>
+                    <div class="card-panel">
+                        <div class="recent-posts">
+                            <div class="recent-post">
+                                <div class="post-title">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<footer id="dark-footer" class="footer footer-blog">
+<div class="container">
+    <div class="columns">
+        <div class="column">
+            <div class="footer-column">
+
+                <div class="footer-header">
+                    <nav class="level is-mobile">
+                        <div class="level-left level-social">
+                            <a href="#" class="level-item">
+                                <span class="icon"><i class="fa fa-facebook"></i></span>
+                            </a>
+                            <a href="#" class="level-item">
+                                <span class="icon"><i class="fa fa-twitter"></i></span>
+                            </a>
+                            <a href="#" class="level-item">
+                                <span class="icon"><i class="fa fa-linkedin"></i></span>
+                            </a>
+                            <a href="#" class="level-item">
+                                <span class="icon"><i class="fa fa-dribbble"></i></span>
+                            </a>
+                            <a href="#" class="level-item">
+                                <span class="icon"><i class="fa fa-github"></i></span>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+                <div class="copyright">
+                    <div>网站主题：<a class="button is-small is-primary" href="https://github.com/cnwanq/onewan.git">onewan</a></div>
+                    <span class="moto light-text">Copyright © 2018 WanQ All rights reserved. reserved.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</footer>
+        
+<div id="backtotop"><a href="#"></a></div>        
+<script src="/assets/js/app.js"></script>
+
+
+<script src="/assets/js/agency.js"></script>
+<script src="/assets/js/contact.js"></script>
+<script src="/assets/js/main.js"></script>
+</body>
+</html>

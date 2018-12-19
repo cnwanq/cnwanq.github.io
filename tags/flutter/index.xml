@@ -6,10 +6,32 @@
     <description>Recent content in Flutter on WanQ Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 19 Dec 2018 15:31:08 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 19 Dec 2018 17:36:25 +0800</lastBuildDate>
     
 	<atom:link href="http://cnwanq.github.io/tags/flutter/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>使用 Material 部件</title>
+      <link>http://cnwanq.github.io/2018/12/%E4%BD%BF%E7%94%A8-material-%E9%83%A8%E4%BB%B6/</link>
+      <pubDate>Wed, 19 Dec 2018 17:36:25 +0800</pubDate>
+      
+      <guid>http://cnwanq.github.io/2018/12/%E4%BD%BF%E7%94%A8-material-%E9%83%A8%E4%BB%B6/</guid>
+      <description>Flutter 提供的组件都遵循 Google 的 Material Design。一个 Material App 都是从 MaterialApp widget 开始，并且会包含一个导航 Navigator。
+看代码实例:
+import &#39;package:flutter/material.dart&#39;; void main() =&amp;gt; runApp(MaterialApp( title: &#39;Flutter Tutorail&#39;, home: TutorialHome(), )); class TutorialHome extends StatelessWidget { @override Widget build(BuildContext context) { return Scaffold( appBar: AppBar( leading: IconButton(icon: Icon(Icons.menu), tooltip: &#39;Navigation menu&#39;, onPressed: null), title: Text(&#39;Example title&#39;), actions: &amp;lt;Widget&amp;gt;[ IconButton( icon: Icon(Icons.search), tooltip: &#39;Search&#39;, onPressed: null, ) ], ), body: Center( child: Text(&#39;Hello, world!&#39;), ), floatingActionButton: FloatingActionButton( tooltip: &#39;Add&#39;, child: Icon(Icons.</description>
+    </item>
+    
+    <item>
+      <title>基本 Widgets</title>
+      <link>http://cnwanq.github.io/2018/12/%E5%9F%BA%E6%9C%AC-widgets/</link>
+      <pubDate>Wed, 19 Dec 2018 16:53:50 +0800</pubDate>
+      
+      <guid>http://cnwanq.github.io/2018/12/%E5%9F%BA%E6%9C%AC-widgets/</guid>
+      <description>Flutter有一套非常灵活的基本的widget。经常会用到的有： * Text: 文本部件可以创建一系列样式的文本 * Row, Column: 布局部件，横向布局与垂直布局。借鉴与 web 里面的 flex 布局 * Stack: 布局部件，允许按照部件添加顺序堆叠咋一起。可以通过分别设置上左下右，来调整位置。 * Container: 容器部件，创建矩形可视元素。可以使用BoxDecoration装饰容器，例如背景，边框或阴影。 Container也可以在其大小上应用边距，填充和约束。另外，可以使用矩阵在三维空
+下面是一些简单的小部件 demo，它们结合了这些小部件和其他小部件：
+import &#39;package:flutter/material.dart&#39;; class MyAppBar extends StatelessWidget { MyAppBar({this.title}); final Widget title; @override Widget build(BuildContext context) { return Container( height: 88.0, padding: const EdgeInsets.fromLTRB(8, 44, 8, 0), decoration: BoxDecoration(color: Colors.blue[500]), child: Row( children: &amp;lt;Widget&amp;gt;[ IconButton( icon: Icon(Icons.menu), tooltip: &#39;Navigation menu&#39;, onPressed: null, ), Expanded( child: title, ), IconButton( icon: Icon(Icons.search), tooltip: &#39;Search&#39;, onPressed: null, ) ], ), ); } } class MyScaffold extends StatelessWidget { @override Widget build(BuildContext context) { return Material( child: Column( children: &amp;lt;Widget&amp;gt;[ MyAppBar( title: Text( &#39;Example title&#39;, style: Theme.</description>
+    </item>
     
     <item>
       <title>Hello Flutter</title>
